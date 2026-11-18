@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}Historical Records - Food Waste AI{% endblock %}
+{% block page_title %}Historical Mess Records{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <div>
+            <h2 class="card-title">🗂️ Previous Mess Consumption Logs</h2>
+            <div class="card-subtitle">
+                {% if pagination %}
+                    Showing page {{ pagination.page }} of {{ pagination.pages }} ({{ pagination.total }} records total)
+                {% else %}
+                    Showing {{ records|length }} records stored in database
+                {% endif %}
+            </div>
+        </div>
+        <a href="{{ url_for('api.export_csv') }}" class="btn btn-secondary btn-sm">📄 Export to CSV</a>
+    </div>
+
+    <!-- Filter & Search Bar -->
+    <form method="GET" action="{{ url_for('main.records') }}" style="background-color: #f8fafc; padding: 16px; border-radius: var(--radius-sm); margin-bottom: 20px; border: 1px solid var(--border-color);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; align-items: flex-end;">
+            <!-- Start Date -->
+            <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="start_date">From Date</label>
+                <input type="date" class="form-control" id="start_date" name="start_date" value="{{ filter_start or '' }}">
+            </div>
+
+            <!-- End Date -->
+            <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="end_date">To Date</label>
+                <input type="date" class="form-control" id="end_date" name="end_date" value="{{ filter_end or '' }}">
+            </div>
+
+            <!-- Meal Type -->
+            <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="filter_meal">Meal Session</label>
+                <select class="form-control" id="filter_meal" name="meal_type">
+                    <option value="">All Sessions</option>
+                    <option value="Breakfast" {% if filter_meal == 'Breakfast' %}selected{% endif %}>Breakfast</option>
+                    <option value="Lunch" {% if filter_meal == 'Lunch' %}selected{% endif %}>Lunch</option>
+                    <option value="Dinner" {% if filter_meal == 'Dinner' %}selected{% endif %}>Dinner</option>
+                </select>
+            </div>
+
+            <!-- Search Menu -->
+            <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="search_menu">Search Menu</label>
+                <input type="text" class="form-control" id="search_menu" name="q" placeholder="e.g. Biryani" value="{{ search_q or '' }}">
+            </div>
+
+            <!-- Filter Buttons -->
+            <div style="display: flex; gap: 8px;">
+                <button type="submit" class="btn btn-primary btn-sm" style="flex: 1;">🔍 Filter</button>
+                <a href="{{ url_for('main.records') }}" class="btn btn-secondary btn-sm" title="Clear Filters">Reset</a>
+            </div>
+        </div>
+    </form>
+
+    <!-- Records Table -->
+    {% if records %}
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th># ID</th>
+                    <th>Date</th>
+                    <th>Meal</th>
+                    <th>Menu Served</th>
+                    <th>Attendance</th>
+                    <th>Prepared</th>
+                    <th>Actual Consumed</th>
+                    <th>Actual Waste</th>
+                    <th>Waste %</th>
+                    <th>AI Forecast & Workflow</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in records %}
+                <tr>
+                    <td>#{{ r.id }}</td>
+                    <td><strong>{{ r.record_date.strftime('%Y-%m-%d') }}</strong> ({{ r.day_of_week[:3] }})</td>
+                    <td>
+                        <span class="badge {% if r.meal_type == 'Breakfast' %}badge-low{% elif r.meal_type == 'Lunch' %}badge-medium{% else %}badge-pending{% endif %}">
+                            {{ r.meal_type }}
+                        </span>
+                    </td>
+                    <td>{{ r.menu_name }}</td>
+                    <td>{{ r.attendance }}</td>
+                    <td>{{ r.prepared_meals }}</td>
+                    <td>
+                        {% if r.consumed_meals is not none %}
+                            {{ r.consumed_meals }}
+                        {% else %}
+                            <span class="badge badge-pending">Ongoing</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if r.wasted_meals is not none %}
+                            <strong style="color: {% if r.wasted_meals > 30 %}var(--danger){% else %}var(--text-primary){% endif %};">
+                                +{{ r.wasted_meals }}
+                            </strong>
+                        {% else %}
+                            <span style="color: var(--text-muted);">&mdash;</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if r.waste_percentage is not none %}
+                            <span class="badge {% if r.waste_percentage <= 10 %}badge-low{% elif r.waste_percentage <= 20 %}badge-medium{% else %}badge-high{% endif %}">
+                                {{ r.waste_percentage }}%
+                            </span>
+                        {% else %}
+                            <span class="badge badge-pending">Pending</span>
+                        {% endif %}
+                    </td>
+                    <td style="font-size: 11px;">
+                        {% if r.predicted_meals is not none %}
+                            <div>Pred: <strong>{{ r.predicted_meals }}</strong></div>
+                            <div style="color: var(--text-muted);">
+                                Surplus: {% if r.estimated_surplus is not none %}{% if r.estimated_surplus > 0 %}+{% endif %}{{ r.estimated_surplus }}{% else %}N/A{% endif %} |
+                                Err: {% if r.prediction_error is not none %}{% if r.prediction_error > 0 %}+{% endif %}{{ r.prediction_error }}{% else %}Pending{% endif %}
+                            </div>
+                        {% else %}
+                            <span style="color: var(--text-muted);">Manual Log</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <div style="display: flex; gap: 6px;">
+                            <a href="{{ url_for('main.edit_record', record_id=r.id) }}" class="btn btn-secondary btn-sm" style="padding: 4px 8px; font-size: 11px;">✏️ Edit</a>
+                            <form method="POST" action="{{ url_for('main.delete_record', record_id=r.id) }}" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete Record #{{ r.id }}?');">
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                <button type="submit" class="btn btn-danger btn-sm" style="padding: 4px 8px; font-size: 11px;">🗑️ Delete</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination Navigation -->
+    {% if pagination and pagination.pages > 1 %}
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-top: 1px solid var(--border-color); margin-top: 16px; flex-wrap: wrap; gap: 10px;">
+        <div style="font-size: 13px; color: var(--text-muted);">
+            Page <strong>{{ pagination.page }}</strong> of <strong>{{ pagination.pages }}</strong> ({{ pagination.total }} records total)
+        </div>
+        <div style="display: flex; gap: 8px;">
+            {% if pagination.has_prev %}
+            <a href="{{ url_for('main.records', page=pagination.prev_num, start_date=filter_start, end_date=filter_end, meal_type=filter_meal, q=search_q) }}" class="btn btn-secondary btn-sm">&larr; Previous</a>
+            {% endif %}
+            {% if pagination.has_next %}
+            <a href="{{ url_for('main.records', page=pagination.next_num, start_date=filter_start, end_date=filter_end, meal_type=filter_meal, q=search_q) }}" class="btn btn-secondary btn-sm">Next &rarr;</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+    {% else %}
+    <div class="empty-state">
+        <div class="empty-state-icon">🔍</div>
+        <h3>No Records Found</h3>
+        <p>No historical records match your filter criteria. Try resetting your search filters.</p>
+        <a href="{{ url_for('main.records') }}" class="btn btn-secondary btn-sm">Reset Filters</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

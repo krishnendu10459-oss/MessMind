@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ error_code }} - {{ title }} - Food Waste AI{% endblock %}
+{% block page_title %}{{ error_code }} {{ title }}{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 600px; margin: 40px auto; text-align: center; padding: 40px 24px;">
+    <div style="font-size: 54px; margin-bottom: 12px;">
+        {% if error_code == 404 %}🔍{% elif error_code == 403 %}🛡️{% elif error_code == 400 %}⚠️{% else %}🔧{% endif %}
+    </div>
+    <h2 style="color: var(--primary-dark); font-size: 24px; margin-bottom: 8px;">{{ error_code }} &mdash; {{ title }}</h2>
+    <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.5; margin-bottom: 24px;">
+        {{ message }}
+    </p>
+    <div style="display: flex; justify-content: center; gap: 12px;">
+        <a href="{{ url_for('main.dashboard') }}" class="btn btn-primary">Go to Dashboard</a>
+        <a href="javascript:history.back()" class="btn btn-secondary">Go Back</a>
+    </div>
+</div>
+{% endblock %}

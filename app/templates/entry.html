@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+
+{% block title %}Daily Data Entry - Food Waste AI{% endblock %}
+{% block page_title %}Daily Meal Log Entry{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 860px; margin: 0 auto;">
+    <div class="card-header">
+        <div>
+            <h2 class="card-title">📝 Record Mess Consumption & Kitchen Production</h2>
+            <div class="card-subtitle">Enter daily attendance, menu, planned cooking, and actual consumption</div>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm" id="fillSampleBtn">⚡ Fill Demo Values</button>
+    </div>
+
+    <!-- AI Prediction Linkage Banner (Displayed when pre-filled from /predict) -->
+    {% if prefill_pred %}
+    <div style="background-color: #ecfdf5; border: 1px solid #a7f3d0; border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 24px;">🔮</span>
+            <div>
+                <strong style="color: var(--primary-dark); font-size: 14px;">Pre-filled from AI Meal Demand Forecast</strong>
+                <div style="font-size: 12px; color: var(--text-secondary); margin-top: 2px;">
+                    Predicted Demand: <strong style="color: var(--primary);">{{ prefill_pred }} meals</strong> &bull;
+                    Recommended Preparation: <strong style="color: var(--text-primary);">{{ prefill_prep }} meals</strong> (Includes 5% safety buffer)
+                </div>
+            </div>
+        </div>
+        <span class="badge badge-low">Forecast Linked</span>
+    </div>
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('main.entry') }}" id="entryForm">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <!-- Hidden input storing AI Predicted Demand if available -->
+        <input type="hidden" id="predicted_meals" name="predicted_meals" value="{{ prefill_pred or '' }}">
+
+        <div class="form-grid">
+            <!-- Date -->
+            <div class="form-group">
+                <label class="form-label" for="record_date">Date <span class="required">*</span></label>
+                <input type="date" class="form-control" id="record_date" name="record_date" value="{{ prefill_date or today_str }}" required>
+            </div>
+
+            <!-- Meal Type -->
+            <div class="form-group">
+                <label class="form-label" for="meal_type">Meal Session <span class="required">*</span></label>
+                <select class="form-control" id="meal_type" name="meal_type" required>
+                    <option value="Breakfast" {% if prefill_meal == 'Breakfast' %}selected{% endif %}>Breakfast</option>
+                    <option value="Lunch" {% if prefill_meal == 'Lunch' or not prefill_meal %}selected{% endif %}>Lunch</option>
+                    <option value="Dinner" {% if prefill_meal == 'Dinner' %}selected{% endif %}>Dinner</option>
+                </select>
+            </div>
+
+            <!-- Expected Attendance -->
+            <div class="form-group">
+                <label class="form-label" for="attendance">Hostel Attendance (Students) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="attendance" name="attendance" placeholder="e.g. 450" value="{{ prefill_att or '' }}" min="1" max="2500" required>
+                <span class="form-hint">Expected headcount dining in mess</span>
+            </div>
+
+            <!-- Menu Name -->
+            <div class="form-group">
+                <label class="form-label" for="menu_name">Menu Item / Meal Name <span class="required">*</span></label>
+                <input type="text" class="form-control" id="menu_name" name="menu_name" list="popularMenus" placeholder="e.g. Paneer Butter Masala & Naan" value="{{ prefill_menu or '' }}" required>
+                <datalist id="popularMenus">
+                    <option value="Paneer Butter Masala & Naan/Rice">
+                    <option value="Veg Biryani & Mirchi Ka Salan">
+                    <option value="Rajma Masala & Steamed Rice">
+                    <option value="Chole Bhature & Jeera Rice">
+                    <option value="Dal Makhani & Roti/Rice">
+                    <option value="Masala Dosa & Sambar">
+                    <option value="Poori & Aloo Sabzi">
+                    <option value="Aloo Paratha & Curd">
+                    <option value="Idli & Vada with Chutney">
+                    <option value="Plain Dal Khichdi & Curd">
+                </datalist>
+                <span class="form-hint">Item name directly influences dining popularity</span>
+            </div>
+
+            <!-- Prepared Meals -->
+            <div class="form-group">
+                <label class="form-label" for="prepared_meals">Cooked / Prepared Meals <span class="required">*</span></label>
+                <input type="number" class="form-control" id="prepared_meals" name="prepared_meals" placeholder="e.g. 480" value="{{ prefill_prep or '' }}" min="1" required>
+                <span class="form-hint">Total portions cooked by kitchen staff</span>
+            </div>
+
+            <!-- Consumed Meals (Optional if in progress) -->
+            <div class="form-group">
+                <label class="form-label" for="consumed_meals">Actual Consumed Meals</label>
+                <input type="number" class="form-control" id="consumed_meals" name="consumed_meals" placeholder="Leave empty if meal is ongoing" min="0">
+                <span class="form-hint">Enter after meal completion to compute actual food waste</span>
+            </div>
+        </div>
+
+        <!-- Live Workflow Calculations Preview Card -->
+        <div id="liveCalcBox" style="display: none; background-color: var(--primary-subtle); border: 1px solid var(--primary-border); border-radius: var(--radius-sm); padding: 14px 18px; margin: 16px 0;">
+            <div style="font-size: 13px; font-weight: 700; color: var(--primary-dark); margin-bottom: 8px;">
+                📊 Live Workflow Calculations (Step 8):
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+                <!-- 1. Actual Food Waste -->
+                <div>
+                    <span style="font-size: 12px; color: var(--text-secondary);">Actual Food Waste:</span>
+                    <div style="font-size: 16px; font-weight: 700; color: var(--primary-dark);" id="liveWastedMeals">&mdash;</div>
+                    <span id="liveWastePctBadge" class="badge badge-low" style="font-size: 11px; margin-top: 2px;">0.0%</span>
+                </div>
+
+                <!-- 2. Estimated Surplus Before Preparation -->
+                <div id="plannedSurplusCol" style="display: none;">
+                    <span style="font-size: 12px; color: var(--text-secondary);">Planned Surplus Buffer:</span>
+                    <div style="font-size: 16px; font-weight: 700; color: #0288d1;" id="livePlannedSurplus">&mdash;</div>
+                    <span style="font-size: 11px; color: var(--text-muted);">Prepared &minus; Predicted</span>
+                </div>
+
+                <!-- 3. Model Prediction Error -->
+                <div id="predErrorCol" style="display: none;">
+                    <span style="font-size: 12px; color: var(--text-secondary);">Model Prediction Error:</span>
+                    <div style="font-size: 16px; font-weight: 700;" id="livePredError">&mdash;</div>
+                    <span style="font-size: 11px; color: var(--text-muted);">Consumed &minus; Predicted</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notes -->
+        <div class="form-group" style="margin-top: 10px;">
+            <label class="form-label" for="notes">Kitchen & Dining Notes (Optional)</label>
+            <textarea class="form-control" id="notes" name="notes" placeholder="e.g. Heavy rain during lunch; many students arrived late."></textarea>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 12px; margin-top: 24px;">
+            <a href="{{ url_for('main.dashboard') }}" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary" id="saveRecordBtn">💾 Save Mess Record</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const prepInput = document.getElementById("prepared_meals");
+    const consInput = document.getElementById("consumed_meals");
+    const predInput = document.getElementById("predicted_meals");
+    const calcBox = document.getElementById("liveCalcBox");
+    const wastedEl = document.getElementById("liveWastedMeals");
+    const wastePctBadge = document.getElementById("liveWastePctBadge");
+    const plannedCol = document.getElementById("plannedSurplusCol");
+    const plannedEl = document.getElementById("livePlannedSurplus");
+    const errorCol = document.getElementById("predErrorCol");
+    const errorEl = document.getElementById("livePredError");
+    const fillSampleBtn = document.getElementById("fillSampleBtn");
+
+    function updateLiveCalculation() {
+        const prep = parseInt(prepInput.value, 10);
+        const consVal = consInput.value.trim();
+        const predVal = predInput.value.trim();
+        const pred = predVal !== "" ? parseInt(predVal, 10) : NaN;
+
+        let hasOutput = false;
+
+        // Check if Planned Surplus can be calculated (Prepared planned - Predicted demand)
+        if (!isNaN(prep) && !isNaN(pred)) {
+            const surplus = prep - pred;
+            plannedCol.style.display = "block";
+            plannedEl.innerText = `${surplus >= 0 ? '+' : ''}${surplus} meals`;
+            hasOutput = true;
+        } else {
+            plannedCol.style.display = "none";
+        }
+
+        // Actual waste calculation (requires actual consumption)
+        if (consVal !== "") {
+            const cons = parseInt(consVal, 10);
+            if (!isNaN(prep) && !isNaN(cons) && prep > 0 && cons >= 0) {
+                if (cons > prep) {
+                    calcBox.style.display = "block";
+                    wastedEl.innerText = "Error: Consumed cannot exceed prepared!";
+                    wastedEl.style.color = "var(--danger)";
+                    wastePctBadge.style.display = "none";
+                    errorCol.style.display = "none";
+                    return;
+                }
+
+                // 1. Actual Food Waste = Prepared - Consumed
+                const wasted = prep - cons;
+                const pct = ((wasted / prep) * 100).toFixed(1);
+
+                calcBox.style.display = "block";
+                wastedEl.style.color = "var(--primary-dark)";
+                wastedEl.innerText = `${wasted} meals`;
+                wastePctBadge.style.display = "inline-block";
+                wastePctBadge.innerText = `${pct}%`;
+
+                if (pct <= 10) {
+                    wastePctBadge.className = "badge badge-low";
+                } else if (pct <= 20) {
+                    wastePctBadge.className = "badge badge-medium";
+                } else {
+                    wastePctBadge.className = "badge badge-high";
+                }
+
+                // 3. Prediction Error = Actual consumption - Predicted consumption
+                if (!isNaN(pred)) {
+                    const err = cons - pred;
+                    errorCol.style.display = "block";
+                    errorEl.innerText = `${err >= 0 ? '+' : ''}${err} meals`;
+                    errorEl.style.color = Math.abs(err) <= 20 ? "var(--primary-dark)" : "#f57c00";
+                } else {
+                    errorCol.style.display = "none";
+                }
+
+                hasOutput = true;
+            }
+        } else {
+            // Consumed is not yet entered -> Actual waste is pending
+            wastedEl.innerText = "Pending Consumption";
+            wastedEl.style.color = "var(--text-muted)";
+            wastePctBadge.style.display = "none";
+            errorCol.style.display = "none";
+        }
+
+        calcBox.style.display = hasOutput ? "block" : "none";
+    }
+
+    prepInput.addEventListener("input", updateLiveCalculation);
+    consInput.addEventListener("input", updateLiveCalculation);
+
+    // Initial check if fields were pre-filled
+    updateLiveCalculation();
+
+    // Pre-fill demo sample
+    if (fillSampleBtn) {
+        fillSampleBtn.addEventListener("click", function () {
+            document.getElementById("meal_type").value = "Lunch";
+            document.getElementById("attendance").value = "480";
+            document.getElementById("menu_name").value = "Paneer Butter Masala & Naan/Rice";
+            document.getElementById("prepared_meals").value = "510";
+            document.getElementById("consumed_meals").value = "465";
+            document.getElementById("predicted_meals").value = "485";
+            document.getElementById("notes").value = "Standard high-turnout Friday lunch.";
+            updateLiveCalculation();
+        });
+    }
+});
+</script>
+{% endblock %}

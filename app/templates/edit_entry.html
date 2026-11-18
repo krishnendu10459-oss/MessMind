@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Record #{{ record.id }} - Food Waste AI{% endblock %}
+{% block page_title %}Edit Mess Record #{{ record.id }}{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 860px; margin: 0 auto;">
+    <div class="card-header">
+        <div>
+            <h2 class="card-title">✏️ Edit Mess Record #{{ record.id }}</h2>
+            <div class="card-subtitle">Update meal preparation, attendance, or record completed actual consumption</div>
+        </div>
+        <a href="{{ url_for('main.records') }}" class="btn btn-secondary btn-sm">&larr; Back to Records</a>
+    </div>
+
+    {% if record.predicted_meals %}
+    <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
+        <div>
+            <strong style="color: var(--primary-dark); font-size: 13px;">🔮 AI Forecast Linkage:</strong>
+            <span style="font-size: 13px; color: var(--text-secondary); margin-left: 6px;">
+                Predicted Demand: <strong>{{ record.predicted_meals }} meals</strong> &bull;
+                Estimated Planned Surplus: <strong>{% if record.estimated_surplus is not none %}{% if record.estimated_surplus > 0 %}+{% endif %}{{ record.estimated_surplus }}{% else %}N/A{% endif %} meals</strong>
+            </span>
+        </div>
+        <span class="badge badge-low">Model Linked</span>
+    </div>
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('main.edit_record', record_id=record.id) }}" id="editForm">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="predicted_meals" value="{{ record.predicted_meals or '' }}">
+
+        <div class="form-grid">
+            <!-- Date -->
+            <div class="form-group">
+                <label class="form-label" for="record_date">Date <span class="required">*</span></label>
+                <input type="date" class="form-control" id="record_date" name="record_date" value="{{ record.record_date.strftime('%Y-%m-%d') }}" required>
+            </div>
+
+            <!-- Meal Type -->
+            <div class="form-group">
+                <label class="form-label" for="meal_type">Meal Session <span class="required">*</span></label>
+                <select class="form-control" id="meal_type" name="meal_type" required>
+                    <option value="Breakfast" {% if record.meal_type == 'Breakfast' %}selected{% endif %}>Breakfast</option>
+                    <option value="Lunch" {% if record.meal_type == 'Lunch' %}selected{% endif %}>Lunch</option>
+                    <option value="Dinner" {% if record.meal_type == 'Dinner' %}selected{% endif %}>Dinner</option>
+                </select>
+            </div>
+
+            <!-- Expected Attendance -->
+            <div class="form-group">
+                <label class="form-label" for="attendance">Hostel Attendance <span class="required">*</span></label>
+                <input type="number" class="form-control" id="attendance" name="attendance" value="{{ record.attendance }}" min="1" max="2500" required>
+            </div>
+
+            <!-- Menu Name -->
+            <div class="form-group">
+                <label class="form-label" for="menu_name">Menu Item / Meal Name <span class="required">*</span></label>
+                <input type="text" class="form-control" id="menu_name" name="menu_name" value="{{ record.menu_name }}" required>
+            </div>
+
+            <!-- Prepared Meals -->
+            <div class="form-group">
+                <label class="form-label" for="prepared_meals">Cooked / Prepared Meals <span class="required">*</span></label>
+                <input type="number" class="form-control" id="prepared_meals" name="prepared_meals" value="{{ record.prepared_meals }}" min="1" required>
+            </div>
+
+            <!-- Consumed Meals -->
+            <div class="form-group">
+                <label class="form-label" for="consumed_meals">Actual Consumed Meals</label>
+                <input type="number" class="form-control" id="consumed_meals" name="consumed_meals" value="{{ record.consumed_meals if record.consumed_meals is not none else '' }}" placeholder="Enter when dining completes" min="0">
+                <span class="form-hint">Filling this updates actual food waste and prediction error</span>
+            </div>
+        </div>
+
+        <!-- Notes -->
+        <div class="form-group" style="margin-top: 10px;">
+            <label class="form-label" for="notes">Kitchen & Dining Notes</label>
+            <textarea class="form-control" id="notes" name="notes">{{ record.notes or '' }}</textarea>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 12px; margin-top: 24px;">
+            <a href="{{ url_for('main.records') }}" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">💾 Update Record</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

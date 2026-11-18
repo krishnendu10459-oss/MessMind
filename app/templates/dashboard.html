@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Food Waste AI{% endblock %}
+{% block page_title %}College Mess Operations Dashboard{% endblock %}
+
+{% block content %}
+<!-- Top KPI Statistics Grid -->
+<div class="stat-grid">
+    <div class="stat-card">
+        <div class="stat-icon icon-blue">🍳</div>
+        <div class="stat-content">
+            <div class="stat-label">Total Meals Prepared</div>
+            <div class="stat-value">{{ "{:,}".format(stats.total_prepared) }}</div>
+            <div class="stat-hint">Across all recorded kitchen logs</div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon icon-green">🍽️</div>
+        <div class="stat-content">
+            <div class="stat-label">Total Meals Consumed</div>
+            <div class="stat-value">{{ "{:,}".format(stats.total_consumed) }}</div>
+            <div class="stat-hint">Verified student consumption</div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon icon-orange">🗑️</div>
+        <div class="stat-content">
+            <div class="stat-label">Total Food Waste</div>
+            <div class="stat-value">{{ "{:,}".format(stats.total_wasted) }}</div>
+            <div class="stat-hint">Unconsumed surplus portions</div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon {% if stats.waste_percentage > 15 %}icon-red{% else %}icon-green{% endif %}">📉</div>
+        <div class="stat-content">
+            <div class="stat-label">Average Waste %</div>
+            <div class="stat-value">{{ stats.waste_percentage }}%</div>
+            <div class="stat-hint">Target: Below 10.0%</div>
+        </div>
+    </div>
+</div>
+
+{% if stats.ongoing_records > 0 %}
+<div style="background-color: #eff6ff; border: 1px solid #bfdbfe; border-radius: var(--radius-sm); padding: 10px 16px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
+    <div style="font-size: 13px; color: #1e40af;">
+        ℹ️ <strong>Active Dining Session:</strong> {{ stats.ongoing_records }} meal currently ongoing. Actual food waste is calculated after consumption is logged.
+    </div>
+    <a href="{{ url_for('main.records') }}" class="btn btn-secondary btn-sm" style="font-size: 11px;">View Active Logs</a>
+</div>
+{% endif %}
+
+<!-- Interactive Chart.js Section -->
+<div class="charts-grid">
+    <!-- Chart 1: Prepared vs Consumed Trend -->
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h2 class="card-title">📈 Prepared vs. Consumed Meals (Recent Days)</h2>
+                <div class="card-subtitle">Tracking kitchen preparation efficiency vs student demand</div>
+            </div>
+            <span class="badge badge-low">Live Sync</span>
+        </div>
+        <div class="chart-container">
+            <canvas id="consumptionChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Chart 2: Daily Waste Percentage Trend -->
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h2 class="card-title">📊 Daily Food Waste Percentage Trend</h2>
+                <div class="card-subtitle">Portion of prepared food wasted per meal session</div>
+            </div>
+            <span class="badge badge-pending">Target &lt; 10%</span>
+        </div>
+        <div class="chart-container">
+            <canvas id="wastePctChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Mess Activity Table -->
+<div class="card">
+    <div class="card-header">
+        <div>
+            <h2 class="card-title">📋 Recent Mess Activity Logs</h2>
+            <div class="card-subtitle">Latest recorded kitchen preparation and consumption logs</div>
+        </div>
+        <a href="{{ url_for('main.records') }}" class="btn btn-secondary btn-sm">View Full History &rarr;</a>
+    </div>
+
+    {% if recent_records %}
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Meal Session</th>
+                    <th>Menu Served</th>
+                    <th>Attendance</th>
+                    <th>Prepared</th>
+                    <th>Actual Consumed</th>
+                    <th>Actual Waste</th>
+                    <th>Waste %</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in recent_records %}
+                <tr>
+                    <td><strong>{{ r.record_date.strftime('%d %b %Y') }}</strong> ({{ r.day_of_week }})</td>
+                    <td>
+                        <span class="badge {% if r.meal_type == 'Breakfast' %}badge-low{% elif r.meal_type == 'Lunch' %}badge-medium{% else %}badge-pending{% endif %}">
+                            {{ r.meal_type }}
+                        </span>
+                    </td>
+                    <td>{{ r.menu_name }}</td>
+                    <td>{{ r.attendance }}</td>
+                    <td>{{ r.prepared_meals }}</td>
+                    <td>
+                        {% if r.consumed_meals is not none %}
+                            {{ r.consumed_meals }}
+                        {% else %}
+                            <span class="badge badge-pending">Ongoing</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if r.wasted_meals is not none %}
+                            <strong style="color: {% if r.wasted_meals > 30 %}var(--danger){% else %}var(--text-primary){% endif %};">+{{ r.wasted_meals }}</strong>
+                        {% else %}
+                            <span style="color: var(--text-muted);">&mdash;</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if r.waste_percentage is not none %}
+                            <span class="badge {% if r.waste_percentage <= 10 %}badge-low{% elif r.waste_percentage <= 20 %}badge-medium{% else %}badge-high{% endif %}">
+                                {{ r.waste_percentage }}%
+                            </span>
+                        {% else %}
+                            <span class="badge badge-pending">Pending</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <div class="empty-state-icon">🍲</div>
+        <h3>No Mess Records Yet</h3>
+        <p>Start recording daily meal preparation and consumption or seed sample historical data.</p>
+        <a href="{{ url_for('main.entry') }}" class="btn btn-primary">+ Enter First Record</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block title %}AI Meal Demand Prediction - Food Waste AI{% endblock %}
+{% block page_title %}AI Meal Demand Predictor{% endblock %}
+
+{% block content %}
+<div style="max-width: 900px; margin: 0 auto;">
+    <!-- Prediction Input Card -->
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h2 class="card-title">🔮 Machine Learning Meal Demand Forecast</h2>
+                <div class="card-subtitle">Predict required food portions using trained Random Forest Regressor before cooking begins</div>
+            </div>
+            <span class="badge badge-low">RF Model Online (R² 0.992)</span>
+        </div>
+
+        <form id="predictionForm" method="POST" action="{{ url_for('main.predict') }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div class="form-grid">
+                <!-- Date -->
+                <div class="form-group">
+                    <label class="form-label" for="pred_date">Planned Date <span class="required">*</span></label>
+                    <input type="date" class="form-control" id="pred_date" name="pred_date" value="{{ today_str }}" required>
+                </div>
+
+                <!-- Meal Type -->
+                <div class="form-group">
+                    <label class="form-label" for="pred_meal">Meal Session <span class="required">*</span></label>
+                    <select class="form-control" id="pred_meal" name="pred_meal" required>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Lunch" selected>Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                    </select>
+                </div>
+
+                <!-- Expected Attendance -->
+                <div class="form-group">
+                    <label class="form-label" for="pred_attendance">Expected Attendance (Hostellers) <span class="required">*</span></label>
+                    <input type="number" class="form-control" id="pred_attendance" name="pred_attendance" placeholder="e.g. 500" value="500" min="20" max="2500" required>
+                    <span class="form-hint">Hostel residents expected in campus</span>
+                </div>
+
+                <!-- Menu Name -->
+                <div class="form-group">
+                    <label class="form-label" for="pred_menu">Menu Item to Prepare <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="pred_menu" name="pred_menu" list="predMenus" placeholder="e.g. Veg Biryani & Mirchi Ka Salan" value="Veg Biryani & Mirchi Ka Salan" required>
+                    <datalist id="predMenus">
+                        <option value="Veg Biryani & Mirchi Ka Salan">
+                        <option value="Paneer Butter Masala & Naan/Rice">
+                        <option value="Rajma Masala & Steamed Rice">
+                        <option value="Chole Bhature & Jeera Rice">
+                        <option value="Dal Makhani & Roti/Rice">
+                        <option value="Masala Dosa & Sambar">
+                        <option value="Poori & Aloo Sabzi">
+                        <option value="Aloo Paratha & Curd">
+                        <option value="Idli & Vada with Chutney">
+                        <option value="Plain Dal Khichdi & Curd">
+                    </datalist>
+                    <span class="form-hint">Item popularity directly impacts consumption rate</span>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
+                <button type="submit" class="btn btn-primary" id="predictBtn">
+                    <span>⚡ Generate AI Demand Prediction</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Prediction Output Card (Rendered if prediction available) -->
+    {% if result %}
+    <div class="prediction-result-card" id="resultCard">
+        <div class="prediction-header">
+            <div>
+                <span class="badge badge-low" style="font-size: 13px;">AI Analysis Complete</span>
+                <h3 style="font-size: 20px; font-weight: 700; color: var(--primary-dark); margin-top: 4px;">
+                    Forecast for {{ result.date }} ({{ result.day_of_week }}) — {{ result.meal_type }}
+                </h3>
+                <div style="font-size: 13px; color: var(--text-secondary);">Menu: <strong>{{ result.menu_name }}</strong> (Category: {{ result.menu_category }})</div>
+            </div>
+            <div style="text-align: right;">
+                <span style="font-size: 12px; color: var(--text-muted);">Attendance Input</span>
+                <div style="font-size: 18px; font-weight: 700; color: var(--text-primary);">{{ result.expected_attendance }} Students</div>
+            </div>
+        </div>
+
+        <!-- 3 KPI Metric Summary Boxes -->
+        <div class="prediction-metrics-grid">
+            <div class="metric-box">
+                <div class="label">Predicted Consumption</div>
+                <div class="value">{{ result.predicted_consumed_meals }}</div>
+                <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Estimated meals students will eat</div>
+            </div>
+
+            <div class="metric-box highlight">
+                <div class="label">Recommended Preparation</div>
+                <div class="value" style="color: var(--primary);">{{ result.recommended_preparation }}</div>
+                <div style="font-size: 11px; color: var(--primary-dark); margin-top: 4px;">Includes 5.0% safety cushion (+{{ result.buffer_meals }})</div>
+            </div>
+
+            <div class="metric-box">
+                <div class="label">Estimated Demand Range</div>
+                <div class="value" style="font-size: 20px; color: var(--text-primary); margin-top: 8px;">
+                    [{{ result.prediction_interval_90.min }} &ndash; {{ result.prediction_interval_90.max }}]
+                </div>
+                <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">&plusmn;{{ result.prediction_interval_90.margin_meals }} meals (Heuristic Uncertainty Band)</div>
+            </div>
+        </div>
+
+        <!-- AI Rationale Explanation -->
+        <div style="background-color: #ffffff; border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px 18px; margin-top: 14px;">
+            <div style="font-size: 13px; font-weight: 600; color: var(--primary-dark); margin-bottom: 4px;">🧠 Model Rationale & Context:</div>
+            <p style="font-size: 14px; color: var(--text-primary); margin: 0;">{{ result.explanation }}</p>
+            <div style="font-size: 11px; color: var(--text-muted); margin-top: 6px;">
+                Uncertainty Basis: {{ result.prediction_interval_90.basis }} (Ensemble Tree &sigma; = {{ result.prediction_interval_90.tree_std }} meals).
+            </div>
+        </div>
+
+        <!-- Disclaimer Banner -->
+        <div class="disclaimer-banner">
+            <span style="font-size: 18px;">⚠️</span>
+            <div>
+                <strong>Operational Advisory (Synthetic Dataset):</strong> {{ result.disclaimer }}
+                The kitchen manager should verify sudden campus events, flash rains, or student gatherings before finalizing the stove plan.
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: 18px;">
+            <a href="{{ url_for('main.entry') }}?date={{ result.date }}&meal={{ result.meal_type }}&menu={{ result.menu_name|urlencode }}&att={{ result.expected_attendance }}&prep={{ result.recommended_preparation }}&pred={{ result.predicted_consumed_meals }}" class="btn btn-primary btn-sm">
+                📋 Pre-fill this recommendation in Daily Entry &rarr;
+            </a>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Prediction History Table -->
+    {% if prediction_history %}
+    <div class="card" style="margin-top: 24px;">
+        <div class="card-header">
+            <div>
+                <h3 class="card-title">📜 Recent AI Prediction History</h3>
+                <div class="card-subtitle">Previous model inferences saved to database</div>
+            </div>
+            <span class="badge badge-low">{{ prediction_history|length }} Logs</span>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date Planned</th>
+                        <th>Session</th>
+                        <th>Menu Item</th>
+                        <th>Expected Attendance</th>
+                        <th>Predicted Meals</th>
+                        <th>Estimated Range</th>
+                        <th>Logged At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in prediction_history %}
+                    <tr>
+                        <td><strong>{{ p.prediction_date.strftime('%Y-%m-%d') }}</strong></td>
+                        <td>
+                            <span class="badge {% if p.meal_type == 'Breakfast' %}badge-low{% elif p.meal_type == 'Lunch' %}badge-medium{% else %}badge-pending{% endif %}">
+                                {{ p.meal_type }}
+                            </span>
+                        </td>
+                        <td>{{ p.menu_name }}</td>
+                        <td>{{ p.expected_attendance }}</td>
+                        <td><strong style="color: var(--primary-dark);">{{ p.predicted_meals }} meals</strong></td>
+                        <td>
+                            {% if p.confidence_interval_min and p.confidence_interval_max %}
+                                [{{ p.confidence_interval_min }} &ndash; {{ p.confidence_interval_max }}]
+                            {% else %}
+                                &mdash;
+                            {% endif %}
+                        </td>
+                        <td style="font-size: 12px; color: var(--text-muted);">{{ p.created_at.strftime('%d %b %H:%M') if p.created_at else '' }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

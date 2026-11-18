@@ -1,0 +1,32 @@
+{
+    "model_name": "Random Forest Regressor",
+    "algorithm": "RandomForestRegressor(n_estimators=120, max_depth=12, random_state=42)",
+    "training_samples": 576,
+    "test_samples": 144,
+    "random_forest": {
+        "mae": 9.11,
+        "rmse": 11.9,
+        "r2_score": 0.9921
+    },
+    "baseline_dummy": {
+        "mae": 111.43,
+        "rmse": 134.81,
+        "r2_score": -0.0087
+    },
+    "improvements": {
+        "mae_reduction_percent": 91.8
+    },
+    "features_used": [
+        "day_of_week",
+        "meal_type",
+        "menu_name",
+        "menu_category",
+        "attendance",
+        "is_weekend",
+        "month",
+        "is_exam_season",
+        "is_vacation"
+    ],
+    "target_variable": "consumed_meals",
+    "synthetic_data_limitations": "The model is trained on a synthetic dataset reflecting estimated student attendance and menu-dependent consumption patterns. While accurate for standard college patterns, unanticipated real-world campus events (sudden holidays, hostel water disruption, food delivery discounts) may introduce variations requiring ongoing human supervision."
+}

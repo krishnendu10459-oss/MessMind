@@ -1,0 +1,721 @@
+record_date,day_of_week,meal_type,menu_name,menu_category,attendance,prepared_meals,consumed_meals,wasted_meals,waste_percentage,is_weekend,month,is_exam_season,is_vacation
+2025-07-01,Tuesday,Breakfast,Masala Dosa & Sambar,South Indian,142,155,129,26,16.77,0,7,0,1
+2025-07-01,Tuesday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,153,165,113,52,31.52,0,7,0,1
+2025-07-01,Tuesday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,149,172,143,29,16.86,0,7,0,1
+2025-07-02,Wednesday,Breakfast,Upma & Mixed Chutney,Light Snacks,143,170,108,62,36.47,0,7,0,1
+2025-07-02,Wednesday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,165,187,151,36,19.25,0,7,0,1
+2025-07-02,Wednesday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,154,173,141,32,18.5,0,7,0,1
+2025-07-03,Thursday,Breakfast,Masala Dosa & Sambar,South Indian,102,110,93,17,15.45,0,7,0,1
+2025-07-03,Thursday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,117,132,96,36,27.27,0,7,0,1
+2025-07-03,Thursday,Dinner,Aloo Gobi & Chapati,Regular Meal,112,134,89,45,33.58,0,7,0,1
+2025-07-04,Friday,Breakfast,Poori & Aloo Sabzi,North Indian,122,136,109,27,19.85,0,7,0,1
+2025-07-04,Friday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,139,157,135,22,14.01,0,7,0,1
+2025-07-04,Friday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,134,151,109,42,27.81,0,7,0,1
+2025-07-05,Saturday,Breakfast,Aloo Paratha & Curd,North Indian,116,135,104,31,22.96,1,7,0,1
+2025-07-05,Saturday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,114,129,82,47,36.43,1,7,0,1
+2025-07-05,Saturday,Dinner,Rasam Rice & Papad,South Indian,100,112,75,37,33.04,1,7,0,1
+2025-07-06,Sunday,Breakfast,Masala Dosa & Sambar,South Indian,139,155,127,28,18.06,1,7,0,1
+2025-07-06,Sunday,Lunch,Chole Bhature & Jeera Rice,North Indian,152,179,140,39,21.79,1,7,0,1
+2025-07-06,Sunday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,133,160,126,34,21.25,1,7,0,1
+2025-07-07,Monday,Breakfast,Aloo Paratha & Curd,North Indian,124,146,114,32,21.92,0,7,0,1
+2025-07-07,Monday,Lunch,Kadhi Pakoda & Rice,North Indian,147,163,122,41,25.15,0,7,0,1
+2025-07-07,Monday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,139,151,130,21,13.91,0,7,0,1
+2025-07-08,Tuesday,Breakfast,Upma & Mixed Chutney,Light Snacks,102,115,77,38,33.04,0,7,0,1
+2025-07-08,Tuesday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,118,141,97,44,31.21,0,7,0,1
+2025-07-08,Tuesday,Dinner,Butter Paneer & Kulcha,Special Feast,116,139,105,34,24.46,0,7,0,1
+2025-07-09,Wednesday,Breakfast,Upma & Mixed Chutney,Light Snacks,143,154,105,49,31.82,0,7,0,1
+2025-07-09,Wednesday,Lunch,Dal Makhani & Roti/Rice,North Indian,170,195,152,43,22.05,0,7,0,1
+2025-07-09,Wednesday,Dinner,Butter Paneer & Kulcha,Special Feast,164,191,150,41,21.47,0,7,0,1
+2025-07-10,Thursday,Breakfast,Poori & Aloo Sabzi,North Indian,134,162,125,37,22.84,0,7,0,1
+2025-07-10,Thursday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,155,169,145,24,14.2,0,7,0,1
+2025-07-10,Thursday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,153,171,139,32,18.71,0,7,0,1
+2025-07-11,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,105,114,85,29,25.44,0,7,0,1
+2025-07-11,Friday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,115,131,83,48,36.64,0,7,0,1
+2025-07-11,Friday,Dinner,Aloo Gobi & Chapati,Regular Meal,108,125,85,40,32.0,0,7,0,1
+2025-07-12,Saturday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,169,191,138,53,27.75,1,7,0,1
+2025-07-12,Saturday,Lunch,Sambhar Rice & Poriyal,South Indian,162,177,134,43,24.29,1,7,0,1
+2025-07-12,Saturday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,140,162,130,32,19.75,1,7,0,1
+2025-07-13,Sunday,Breakfast,Masala Dosa & Sambar,South Indian,131,158,119,39,24.68,1,7,0,1
+2025-07-13,Sunday,Lunch,Sambhar Rice & Poriyal,South Indian,133,156,108,48,30.77,1,7,0,1
+2025-07-13,Sunday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,121,145,117,28,19.31,1,7,0,1
+2025-07-14,Monday,Breakfast,Poori & Aloo Sabzi,North Indian,143,156,127,29,18.59,0,7,0,1
+2025-07-14,Monday,Lunch,Kadhi Pakoda & Rice,North Indian,150,180,125,55,30.56,0,7,0,1
+2025-07-14,Monday,Dinner,Butter Paneer & Kulcha,Special Feast,149,162,142,20,12.35,0,7,0,1
+2025-07-15,Tuesday,Breakfast,Aloo Paratha & Curd,North Indian,126,145,113,32,22.07,0,7,0,1
+2025-07-15,Tuesday,Lunch,Rajma Masala & Steamed Rice,North Indian,139,154,123,31,20.13,0,7,0,1
+2025-07-15,Tuesday,Dinner,Butter Paneer & Kulcha,Special Feast,135,156,128,28,17.95,0,7,0,1
+2025-07-16,Wednesday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,108,129,89,40,31.01,0,7,0,1
+2025-07-16,Wednesday,Lunch,Rajma Masala & Steamed Rice,North Indian,113,135,101,34,25.19,0,7,0,1
+2025-07-16,Wednesday,Dinner,Butter Paneer & Kulcha,Special Feast,107,121,96,25,20.66,0,7,0,1
+2025-07-17,Thursday,Breakfast,Idli & Vada with Chutney,South Indian,157,186,135,51,27.42,0,7,0,1
+2025-07-17,Thursday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,175,212,138,74,34.91,0,7,0,1
+2025-07-17,Thursday,Dinner,Aloo Gobi & Chapati,Regular Meal,175,196,134,62,31.63,0,7,0,1
+2025-07-18,Friday,Breakfast,Idli & Vada with Chutney,South Indian,104,126,86,40,31.75,0,7,0,1
+2025-07-18,Friday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,116,126,107,19,15.08,0,7,0,1
+2025-07-18,Friday,Dinner,Plain Dal Khichdi & Curd,Light Meal,108,130,75,55,42.31,0,7,0,1
+2025-07-19,Saturday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,106,122,86,36,29.51,1,7,0,1
+2025-07-19,Saturday,Lunch,Sambhar Rice & Poriyal,South Indian,117,138,95,43,31.16,1,7,0,1
+2025-07-19,Saturday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,100,117,93,24,20.51,1,7,0,1
+2025-07-20,Sunday,Breakfast,Masala Dosa & Sambar,South Indian,121,132,113,19,14.39,1,7,0,1
+2025-07-20,Sunday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,126,152,92,60,39.47,1,7,0,1
+2025-07-20,Sunday,Dinner,Butter Paneer & Kulcha,Special Feast,116,127,107,20,15.75,1,7,0,1
+2025-07-21,Monday,Breakfast,Upma & Mixed Chutney,Light Snacks,155,178,118,60,33.71,0,7,0,1
+2025-07-21,Monday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,169,204,126,78,38.24,0,7,0,1
+2025-07-21,Monday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,164,194,161,33,17.01,0,7,0,1
+2025-07-22,Tuesday,Breakfast,Aloo Paratha & Curd,North Indian,112,130,101,29,22.31,0,7,0,1
+2025-07-22,Tuesday,Lunch,Dal Makhani & Roti/Rice,North Indian,122,147,105,42,28.57,0,7,0,1
+2025-07-22,Tuesday,Dinner,Butter Paneer & Kulcha,Special Feast,115,128,106,22,17.19,0,7,0,1
+2025-07-23,Wednesday,Breakfast,Poori & Aloo Sabzi,North Indian,99,114,91,23,20.18,0,7,0,1
+2025-07-23,Wednesday,Lunch,Kadhi Pakoda & Rice,North Indian,111,134,91,43,32.09,0,7,0,1
+2025-07-23,Wednesday,Dinner,Rasam Rice & Papad,South Indian,109,130,84,46,35.38,0,7,0,1
+2025-07-24,Thursday,Breakfast,Poori & Aloo Sabzi,North Indian,132,159,119,40,25.16,0,7,0,1
+2025-07-24,Thursday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,156,173,144,29,16.76,0,7,0,1
+2025-07-24,Thursday,Dinner,Butter Paneer & Kulcha,Special Feast,147,176,137,39,22.16,0,7,0,1
+2025-07-25,Friday,Breakfast,Upma & Mixed Chutney,Light Snacks,160,194,123,71,36.6,0,7,0,1
+2025-07-25,Friday,Lunch,Rajma Masala & Steamed Rice,North Indian,186,220,162,58,26.36,0,7,0,1
+2025-07-25,Friday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,178,208,157,51,24.52,0,7,0,1
+2025-07-26,Saturday,Breakfast,Poori & Aloo Sabzi,North Indian,145,174,128,46,26.44,1,7,0,1
+2025-07-26,Saturday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,144,164,117,47,28.66,1,7,0,1
+2025-07-26,Saturday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,132,146,120,26,17.81,1,7,0,1
+2025-07-27,Sunday,Breakfast,Idli & Vada with Chutney,South Indian,142,158,124,34,21.52,1,7,0,1
+2025-07-27,Sunday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,141,162,107,55,33.95,1,7,0,1
+2025-07-27,Sunday,Dinner,Butter Paneer & Kulcha,Special Feast,123,135,117,18,13.33,1,7,0,1
+2025-07-28,Monday,Breakfast,Aloo Paratha & Curd,North Indian,154,183,140,43,23.5,0,7,0,1
+2025-07-28,Monday,Lunch,Kadhi Pakoda & Rice,North Indian,183,207,154,53,25.6,0,7,0,1
+2025-07-28,Monday,Dinner,Aloo Gobi & Chapati,Regular Meal,172,196,132,64,32.65,0,7,0,1
+2025-07-29,Tuesday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,139,153,114,39,25.49,0,7,0,1
+2025-07-29,Tuesday,Lunch,Kadhi Pakoda & Rice,North Indian,145,163,123,40,24.54,0,7,0,1
+2025-07-29,Tuesday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,145,174,126,48,27.59,0,7,0,1
+2025-07-30,Wednesday,Breakfast,Upma & Mixed Chutney,Light Snacks,130,142,96,46,32.39,0,7,0,1
+2025-07-30,Wednesday,Lunch,Kadhi Pakoda & Rice,North Indian,149,176,124,52,29.55,0,7,0,1
+2025-07-30,Wednesday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,143,165,135,30,18.18,0,7,0,1
+2025-07-31,Thursday,Breakfast,Aloo Paratha & Curd,North Indian,97,109,89,20,18.35,0,7,0,1
+2025-07-31,Thursday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,110,126,86,40,31.75,0,7,0,1
+2025-07-31,Thursday,Dinner,Plain Dal Khichdi & Curd,Light Meal,108,120,77,43,35.83,0,7,0,1
+2025-08-01,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,481,564,396,168,29.79,0,8,0,0
+2025-08-01,Friday,Lunch,Chole Bhature & Jeera Rice,North Indian,547,594,492,102,17.17,0,8,0,0
+2025-08-01,Friday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,524,599,437,162,27.05,0,8,0,0
+2025-08-02,Saturday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,376,418,305,113,27.03,1,8,0,0
+2025-08-02,Saturday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,395,475,379,96,20.21,1,8,0,0
+2025-08-02,Saturday,Dinner,Plain Dal Khichdi & Curd,Light Meal,339,411,236,175,42.58,1,8,0,0
+2025-08-03,Sunday,Breakfast,Masala Dosa & Sambar,South Indian,362,397,329,68,17.13,1,8,0,0
+2025-08-03,Sunday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,354,411,292,119,28.95,1,8,0,0
+2025-08-03,Sunday,Dinner,Plain Dal Khichdi & Curd,Light Meal,317,374,227,147,39.3,1,8,0,0
+2025-08-04,Monday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,456,521,378,143,27.45,0,8,0,0
+2025-08-04,Monday,Lunch,Chole Bhature & Jeera Rice,North Indian,534,634,485,149,23.5,0,8,0,0
+2025-08-04,Monday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,510,556,413,143,25.72,0,8,0,0
+2025-08-05,Tuesday,Breakfast,Aloo Paratha & Curd,North Indian,454,499,407,92,18.44,0,8,0,0
+2025-08-05,Tuesday,Lunch,Kadhi Pakoda & Rice,North Indian,511,556,435,121,21.76,0,8,0,0
+2025-08-05,Tuesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,485,528,397,131,24.81,0,8,0,0
+2025-08-06,Wednesday,Breakfast,Idli & Vada with Chutney,South Indian,520,623,447,176,28.25,0,8,0,0
+2025-08-06,Wednesday,Lunch,Kadhi Pakoda & Rice,North Indian,551,618,476,142,22.98,0,8,0,0
+2025-08-06,Wednesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,546,621,460,161,25.93,0,8,0,0
+2025-08-07,Thursday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,517,578,419,159,27.51,0,8,0,0
+2025-08-07,Thursday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,530,622,420,202,32.48,0,8,0,0
+2025-08-07,Thursday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,536,647,449,198,30.6,0,8,0,0
+2025-08-08,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,474,513,386,127,24.76,0,8,0,0
+2025-08-08,Friday,Lunch,Kadhi Pakoda & Rice,North Indian,553,601,464,137,22.8,0,8,0,0
+2025-08-08,Friday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,542,610,444,166,27.21,0,8,0,0
+2025-08-09,Saturday,Breakfast,Aloo Paratha & Curd,North Indian,404,440,366,74,16.82,1,8,0,0
+2025-08-09,Saturday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,390,473,356,117,24.74,1,8,0,0
+2025-08-09,Saturday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,343,401,334,67,16.71,1,8,0,0
+2025-08-10,Sunday,Breakfast,Poori & Aloo Sabzi,North Indian,349,383,311,72,18.8,1,8,0,0
+2025-08-10,Sunday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,375,441,350,91,20.63,1,8,0,0
+2025-08-10,Sunday,Dinner,Plain Dal Khichdi & Curd,Light Meal,327,397,234,163,41.06,1,8,0,0
+2025-08-11,Monday,Breakfast,Poori & Aloo Sabzi,North Indian,499,560,441,119,21.25,0,8,0,0
+2025-08-11,Monday,Lunch,Kadhi Pakoda & Rice,North Indian,539,587,459,128,21.81,0,8,0,0
+2025-08-11,Monday,Dinner,Rasam Rice & Papad,South Indian,536,631,407,224,35.5,0,8,0,0
+2025-08-12,Tuesday,Breakfast,Upma & Mixed Chutney,Light Snacks,448,532,346,186,34.96,0,8,0,0
+2025-08-12,Tuesday,Lunch,Sambhar Rice & Poriyal,South Indian,507,552,425,127,23.01,0,8,0,0
+2025-08-12,Tuesday,Dinner,Rasam Rice & Papad,South Indian,486,580,383,197,33.97,0,8,0,0
+2025-08-13,Wednesday,Breakfast,Aloo Paratha & Curd,North Indian,453,516,422,94,18.22,0,8,0,0
+2025-08-13,Wednesday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,503,600,368,232,38.67,0,8,0,0
+2025-08-13,Wednesday,Dinner,Aloo Gobi & Chapati,Regular Meal,481,575,380,195,33.91,0,8,0,0
+2025-08-14,Thursday,Breakfast,Aloo Paratha & Curd,North Indian,504,606,452,154,25.41,0,8,0,0
+2025-08-14,Thursday,Lunch,Chole Bhature & Jeera Rice,North Indian,539,632,498,134,21.2,0,8,0,0
+2025-08-14,Thursday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,500,552,454,98,17.75,0,8,0,0
+2025-08-15,Friday,Breakfast,Aloo Paratha & Curd,North Indian,447,500,416,84,16.8,0,8,0,0
+2025-08-15,Friday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,499,555,460,95,17.12,0,8,0,0
+2025-08-15,Friday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,482,567,402,165,29.1,0,8,0,0
+2025-08-16,Saturday,Breakfast,Idli & Vada with Chutney,South Indian,350,397,294,103,25.94,1,8,0,0
+2025-08-16,Saturday,Lunch,Chole Bhature & Jeera Rice,North Indian,358,410,331,79,19.27,1,8,0,0
+2025-08-16,Saturday,Dinner,Aloo Gobi & Chapati,Regular Meal,317,366,258,108,29.51,1,8,0,0
+2025-08-17,Sunday,Breakfast,Idli & Vada with Chutney,South Indian,322,356,267,89,25.0,1,8,0,0
+2025-08-17,Sunday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,340,400,331,69,17.25,1,8,0,0
+2025-08-17,Sunday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,291,343,279,64,18.66,1,8,0,0
+2025-08-18,Monday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,525,588,434,154,26.19,0,8,0,0
+2025-08-18,Monday,Lunch,Sambhar Rice & Poriyal,South Indian,554,639,447,192,30.05,0,8,0,0
+2025-08-18,Monday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,532,596,461,135,22.65,0,8,0,0
+2025-08-19,Tuesday,Breakfast,Upma & Mixed Chutney,Light Snacks,524,608,403,205,33.72,0,8,0,0
+2025-08-19,Tuesday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,561,681,445,236,34.65,0,8,0,0
+2025-08-19,Tuesday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,558,666,496,170,25.53,0,8,0,0
+2025-08-20,Wednesday,Breakfast,Masala Dosa & Sambar,South Indian,470,560,428,132,23.57,0,8,0,0
+2025-08-20,Wednesday,Lunch,Dal Makhani & Roti/Rice,North Indian,502,581,435,146,25.13,0,8,0,0
+2025-08-20,Wednesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,502,558,419,139,24.91,0,8,0,0
+2025-08-21,Thursday,Breakfast,Idli & Vada with Chutney,South Indian,487,555,416,139,25.05,0,8,0,0
+2025-08-21,Thursday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,529,641,504,137,21.37,0,8,0,0
+2025-08-21,Thursday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,512,558,484,74,13.26,0,8,0,0
+2025-08-22,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,413,480,334,146,30.42,0,8,0,0
+2025-08-22,Friday,Lunch,Dal Makhani & Roti/Rice,North Indian,486,544,422,122,22.43,0,8,0,0
+2025-08-22,Friday,Dinner,Plain Dal Khichdi & Curd,Light Meal,483,584,348,236,40.41,0,8,0,0
+2025-08-23,Saturday,Breakfast,Upma & Mixed Chutney,Light Snacks,387,424,285,139,32.78,1,8,0,0
+2025-08-23,Saturday,Lunch,Chole Bhature & Jeera Rice,North Indian,380,454,358,96,21.15,1,8,0,0
+2025-08-23,Saturday,Dinner,Butter Paneer & Kulcha,Special Feast,324,376,306,70,18.62,1,8,0,0
+2025-08-24,Sunday,Breakfast,Aloo Paratha & Curd,North Indian,377,428,342,86,20.09,1,8,0,0
+2025-08-24,Sunday,Lunch,Dal Makhani & Roti/Rice,North Indian,380,414,334,80,19.32,1,8,0,0
+2025-08-24,Sunday,Dinner,Butter Paneer & Kulcha,Special Feast,343,399,323,76,19.05,1,8,0,0
+2025-08-25,Monday,Breakfast,Poori & Aloo Sabzi,North Indian,465,564,425,139,24.65,0,8,0,0
+2025-08-25,Monday,Lunch,Dal Makhani & Roti/Rice,North Indian,485,535,434,101,18.88,0,8,0,0
+2025-08-25,Monday,Dinner,Aloo Gobi & Chapati,Regular Meal,472,521,383,138,26.49,0,8,0,0
+2025-08-26,Tuesday,Breakfast,Upma & Mixed Chutney,Light Snacks,506,575,380,195,33.91,0,8,0,0
+2025-08-26,Tuesday,Lunch,Sambhar Rice & Poriyal,South Indian,537,604,456,148,24.5,0,8,0,0
+2025-08-26,Tuesday,Dinner,Rasam Rice & Papad,South Indian,514,583,400,183,31.39,0,8,0,0
+2025-08-27,Wednesday,Breakfast,Masala Dosa & Sambar,South Indian,480,583,441,142,24.36,0,8,0,0
+2025-08-27,Wednesday,Lunch,Kadhi Pakoda & Rice,North Indian,558,602,478,124,20.6,0,8,0,0
+2025-08-27,Wednesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,530,586,375,211,36.01,0,8,0,0
+2025-08-28,Thursday,Breakfast,Idli & Vada with Chutney,South Indian,471,544,393,151,27.76,0,8,0,0
+2025-08-28,Thursday,Lunch,Dal Makhani & Roti/Rice,North Indian,510,559,454,105,18.78,0,8,0,0
+2025-08-28,Thursday,Dinner,Rasam Rice & Papad,South Indian,498,548,378,170,31.02,0,8,0,0
+2025-08-29,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,460,504,381,123,24.4,0,8,0,0
+2025-08-29,Friday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,533,645,495,150,23.26,0,8,0,0
+2025-08-29,Friday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,512,612,449,163,26.63,0,8,0,0
+2025-08-30,Saturday,Breakfast,Poori & Aloo Sabzi,North Indian,384,446,343,103,23.09,1,8,0,0
+2025-08-30,Saturday,Lunch,Rajma Masala & Steamed Rice,North Indian,403,479,358,121,25.26,1,8,0,0
+2025-08-30,Saturday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,344,384,287,97,25.26,1,8,0,0
+2025-08-31,Sunday,Breakfast,Upma & Mixed Chutney,Light Snacks,297,341,230,111,32.55,1,8,0,0
+2025-08-31,Sunday,Lunch,Rajma Masala & Steamed Rice,North Indian,302,340,271,69,20.29,1,8,0,0
+2025-08-31,Sunday,Dinner,Plain Dal Khichdi & Curd,Light Meal,267,300,189,111,37.0,1,8,0,0
+2025-09-01,Monday,Breakfast,Upma & Mixed Chutney,Light Snacks,427,485,328,157,32.37,0,9,0,0
+2025-09-01,Monday,Lunch,Sambhar Rice & Poriyal,South Indian,504,601,424,177,29.45,0,9,0,0
+2025-09-01,Monday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,496,580,414,166,28.62,0,9,0,0
+2025-09-02,Tuesday,Breakfast,Masala Dosa & Sambar,South Indian,433,473,398,75,15.86,0,9,0,0
+2025-09-02,Tuesday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,482,521,396,125,23.99,0,9,0,0
+2025-09-02,Tuesday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,475,523,460,63,12.05,0,9,0,0
+2025-09-03,Wednesday,Breakfast,Aloo Paratha & Curd,North Indian,462,554,429,125,22.56,0,9,0,0
+2025-09-03,Wednesday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,517,610,379,231,37.87,0,9,0,0
+2025-09-03,Wednesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,504,587,360,227,38.67,0,9,0,0
+2025-09-04,Thursday,Breakfast,Upma & Mixed Chutney,Light Snacks,485,553,370,183,33.09,0,9,0,0
+2025-09-04,Thursday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,508,555,488,67,12.07,0,9,0,0
+2025-09-04,Thursday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,490,532,482,50,9.4,0,9,0,0
+2025-09-05,Friday,Breakfast,Aloo Paratha & Curd,North Indian,480,546,435,111,20.33,0,9,0,0
+2025-09-05,Friday,Lunch,Rajma Masala & Steamed Rice,North Indian,539,647,473,174,26.89,0,9,0,0
+2025-09-05,Friday,Dinner,Aloo Gobi & Chapati,Regular Meal,537,623,425,198,31.78,0,9,0,0
+2025-09-06,Saturday,Breakfast,Upma & Mixed Chutney,Light Snacks,311,370,227,143,38.65,1,9,0,0
+2025-09-06,Saturday,Lunch,Dal Makhani & Roti/Rice,North Indian,328,374,283,91,24.33,1,9,0,0
+2025-09-06,Saturday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,295,358,259,99,27.65,1,9,0,0
+2025-09-07,Sunday,Breakfast,Idli & Vada with Chutney,South Indian,376,431,317,114,26.45,1,9,0,0
+2025-09-07,Sunday,Lunch,Chole Bhature & Jeera Rice,North Indian,365,409,333,76,18.58,1,9,0,0
+2025-09-07,Sunday,Dinner,Rasam Rice & Papad,South Indian,320,375,254,121,32.27,1,9,0,0
+2025-09-08,Monday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,477,575,398,177,30.78,0,9,0,0
+2025-09-08,Monday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,514,610,422,188,30.82,0,9,0,0
+2025-09-08,Monday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,491,574,467,107,18.64,0,9,0,0
+2025-09-09,Tuesday,Breakfast,Upma & Mixed Chutney,Light Snacks,499,548,379,169,30.84,0,9,0,0
+2025-09-09,Tuesday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,546,613,523,90,14.68,0,9,0,0
+2025-09-09,Tuesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,502,551,409,142,25.77,0,9,0,0
+2025-09-10,Wednesday,Breakfast,Aloo Paratha & Curd,North Indian,504,582,453,129,22.16,0,9,0,0
+2025-09-10,Wednesday,Lunch,Sambhar Rice & Poriyal,South Indian,560,669,477,192,28.7,0,9,0,0
+2025-09-10,Wednesday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,554,673,506,167,24.81,0,9,0,0
+2025-09-11,Thursday,Breakfast,Aloo Paratha & Curd,North Indian,468,554,419,135,24.37,0,9,0,0
+2025-09-11,Thursday,Lunch,Chole Bhature & Jeera Rice,North Indian,516,628,481,147,23.41,0,9,0,0
+2025-09-11,Thursday,Dinner,Plain Dal Khichdi & Curd,Light Meal,498,592,352,240,40.54,0,9,0,0
+2025-09-12,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,408,455,336,119,26.15,0,9,0,0
+2025-09-12,Friday,Lunch,Kadhi Pakoda & Rice,North Indian,491,537,424,113,21.04,0,9,0,0
+2025-09-12,Friday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,466,564,450,114,20.21,0,9,0,0
+2025-09-13,Saturday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,314,379,259,120,31.66,1,9,0,0
+2025-09-13,Saturday,Lunch,Dal Makhani & Roti/Rice,North Indian,336,365,289,76,20.82,1,9,0,0
+2025-09-13,Saturday,Dinner,Butter Paneer & Kulcha,Special Feast,290,317,269,48,15.14,1,9,0,0
+2025-09-14,Sunday,Breakfast,Poori & Aloo Sabzi,North Indian,378,445,353,92,20.67,1,9,0,0
+2025-09-14,Sunday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,384,423,289,134,31.68,1,9,0,0
+2025-09-14,Sunday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,344,401,288,113,28.18,1,9,0,0
+2025-09-15,Monday,Breakfast,Aloo Paratha & Curd,North Indian,471,571,432,139,24.34,0,9,0,0
+2025-09-15,Monday,Lunch,Sambhar Rice & Poriyal,South Indian,548,633,460,173,27.33,0,9,0,0
+2025-09-15,Monday,Dinner,Rasam Rice & Papad,South Indian,539,596,413,183,30.7,0,9,0,0
+2025-09-16,Tuesday,Breakfast,Idli & Vada with Chutney,South Indian,411,499,352,147,29.46,0,9,0,0
+2025-09-16,Tuesday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,500,548,462,86,15.69,0,9,0,0
+2025-09-16,Tuesday,Dinner,Aloo Gobi & Chapati,Regular Meal,467,540,377,163,30.19,0,9,0,0
+2025-09-17,Wednesday,Breakfast,Poori & Aloo Sabzi,North Indian,456,492,425,67,13.62,0,9,0,0
+2025-09-17,Wednesday,Lunch,Rajma Masala & Steamed Rice,North Indian,547,651,493,158,24.27,0,9,0,0
+2025-09-17,Wednesday,Dinner,Butter Paneer & Kulcha,Special Feast,519,561,469,92,16.4,0,9,0,0
+2025-09-18,Thursday,Breakfast,Poori & Aloo Sabzi,North Indian,481,528,431,97,18.37,0,9,0,0
+2025-09-18,Thursday,Lunch,Kadhi Pakoda & Rice,North Indian,549,629,468,161,25.6,0,9,0,0
+2025-09-18,Thursday,Dinner,Plain Dal Khichdi & Curd,Light Meal,526,601,377,224,37.27,0,9,0,0
+2025-09-19,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,430,495,356,139,28.08,0,9,0,0
+2025-09-19,Friday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,504,614,392,222,36.16,0,9,0,0
+2025-09-19,Friday,Dinner,Plain Dal Khichdi & Curd,Light Meal,481,552,346,206,37.32,0,9,0,0
+2025-09-20,Saturday,Breakfast,Masala Dosa & Sambar,South Indian,402,441,366,75,17.01,1,9,0,0
+2025-09-20,Saturday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,393,457,289,168,36.76,1,9,0,0
+2025-09-20,Saturday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,342,374,306,68,18.18,1,9,0,0
+2025-09-21,Sunday,Breakfast,Upma & Mixed Chutney,Light Snacks,382,424,291,133,31.37,1,9,0,0
+2025-09-21,Sunday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,377,450,300,150,33.33,1,9,0,0
+2025-09-21,Sunday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,324,369,259,110,29.81,1,9,0,0
+2025-09-22,Monday,Breakfast,Aloo Paratha & Curd,North Indian,512,559,470,89,15.92,0,9,0,0
+2025-09-22,Monday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,524,620,485,135,21.77,0,9,0,0
+2025-09-22,Monday,Dinner,Plain Dal Khichdi & Curd,Light Meal,509,617,353,264,42.79,0,9,0,0
+2025-09-23,Tuesday,Breakfast,Upma & Mixed Chutney,Light Snacks,449,532,341,191,35.9,0,9,0,0
+2025-09-23,Tuesday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,544,614,514,100,16.29,0,9,0,0
+2025-09-23,Tuesday,Dinner,Aloo Gobi & Chapati,Regular Meal,513,588,397,191,32.48,0,9,0,0
+2025-09-24,Wednesday,Breakfast,Aloo Paratha & Curd,North Indian,511,592,477,115,19.43,0,9,0,0
+2025-09-24,Wednesday,Lunch,Kadhi Pakoda & Rice,North Indian,565,674,489,185,27.45,0,9,0,0
+2025-09-24,Wednesday,Dinner,Aloo Gobi & Chapati,Regular Meal,542,631,430,201,31.85,0,9,0,0
+2025-09-25,Thursday,Breakfast,Upma & Mixed Chutney,Light Snacks,458,514,348,166,32.3,0,9,0,0
+2025-09-25,Thursday,Lunch,Sambhar Rice & Poriyal,South Indian,532,585,433,152,25.98,0,9,0,0
+2025-09-25,Thursday,Dinner,Rasam Rice & Papad,South Indian,516,603,389,214,35.49,0,9,0,0
+2025-09-26,Friday,Breakfast,Upma & Mixed Chutney,Light Snacks,430,473,322,151,31.92,0,9,0,0
+2025-09-26,Friday,Lunch,Dal Makhani & Roti/Rice,North Indian,489,566,438,128,22.61,0,9,0,0
+2025-09-26,Friday,Dinner,Butter Paneer & Kulcha,Special Feast,478,566,435,131,23.14,0,9,0,0
+2025-09-27,Saturday,Breakfast,Masala Dosa & Sambar,South Indian,301,343,279,64,18.66,1,9,0,0
+2025-09-27,Saturday,Lunch,Dal Makhani & Roti/Rice,North Indian,301,339,265,74,21.83,1,9,0,0
+2025-09-27,Saturday,Dinner,Butter Paneer & Kulcha,Special Feast,267,306,251,55,17.97,1,9,0,0
+2025-09-28,Sunday,Breakfast,Masala Dosa & Sambar,South Indian,364,403,329,74,18.36,1,9,0,0
+2025-09-28,Sunday,Lunch,Chole Bhature & Jeera Rice,North Indian,371,415,347,68,16.39,1,9,0,0
+2025-09-28,Sunday,Dinner,Butter Paneer & Kulcha,Special Feast,313,345,295,50,14.49,1,9,0,0
+2025-09-29,Monday,Breakfast,Upma & Mixed Chutney,Light Snacks,446,503,338,165,32.8,0,9,0,0
+2025-09-29,Monday,Lunch,Kadhi Pakoda & Rice,North Indian,524,567,428,139,24.51,0,9,0,0
+2025-09-29,Monday,Dinner,Butter Paneer & Kulcha,Special Feast,507,588,473,115,19.56,0,9,0,0
+2025-09-30,Tuesday,Breakfast,Idli & Vada with Chutney,South Indian,470,518,411,107,20.66,0,9,0,0
+2025-09-30,Tuesday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,552,602,453,149,24.75,0,9,0,0
+2025-09-30,Tuesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,512,581,363,218,37.52,0,9,0,0
+2025-10-01,Wednesday,Breakfast,Aloo Paratha & Curd,North Indian,441,480,412,68,14.17,0,10,0,0
+2025-10-01,Wednesday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,488,580,455,125,21.55,0,10,0,0
+2025-10-01,Wednesday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,478,570,434,136,23.86,0,10,0,0
+2025-10-02,Thursday,Breakfast,Poori & Aloo Sabzi,North Indian,426,505,379,126,24.95,0,10,0,0
+2025-10-02,Thursday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,491,564,474,90,15.96,0,10,0,0
+2025-10-02,Thursday,Dinner,Plain Dal Khichdi & Curd,Light Meal,486,571,348,223,39.05,0,10,0,0
+2025-10-03,Friday,Breakfast,Upma & Mixed Chutney,Light Snacks,509,594,391,203,34.18,0,10,0,0
+2025-10-03,Friday,Lunch,Rajma Masala & Steamed Rice,North Indian,554,647,498,149,23.03,0,10,0,0
+2025-10-03,Friday,Dinner,Plain Dal Khichdi & Curd,Light Meal,532,612,369,243,39.71,0,10,0,0
+2025-10-04,Saturday,Breakfast,Idli & Vada with Chutney,South Indian,311,363,261,102,28.1,1,10,0,0
+2025-10-04,Saturday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,334,382,317,65,17.02,1,10,0,0
+2025-10-04,Saturday,Dinner,Aloo Gobi & Chapati,Regular Meal,300,325,241,84,25.85,1,10,0,0
+2025-10-05,Sunday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,390,429,316,113,26.34,1,10,0,0
+2025-10-05,Sunday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,386,462,369,93,20.13,1,10,0,0
+2025-10-05,Sunday,Dinner,Rasam Rice & Papad,South Indian,333,361,259,102,28.25,1,10,0,0
+2025-10-06,Monday,Breakfast,Idli & Vada with Chutney,South Indian,489,590,412,178,30.17,0,10,0,0
+2025-10-06,Monday,Lunch,Kadhi Pakoda & Rice,North Indian,539,627,449,178,28.39,0,10,0,0
+2025-10-06,Monday,Dinner,Plain Dal Khichdi & Curd,Light Meal,529,595,373,222,37.31,0,10,0,0
+2025-10-07,Tuesday,Breakfast,Idli & Vada with Chutney,South Indian,467,563,401,162,28.77,0,10,0,0
+2025-10-07,Tuesday,Lunch,Rajma Masala & Steamed Rice,North Indian,523,575,473,102,17.74,0,10,0,0
+2025-10-07,Tuesday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,506,593,455,138,23.27,0,10,0,0
+2025-10-08,Wednesday,Breakfast,Upma & Mixed Chutney,Light Snacks,456,543,340,203,37.38,0,10,0,0
+2025-10-08,Wednesday,Lunch,Rajma Masala & Steamed Rice,North Indian,497,588,456,132,22.45,0,10,0,0
+2025-10-08,Wednesday,Dinner,Rasam Rice & Papad,South Indian,487,571,366,205,35.9,0,10,0,0
+2025-10-09,Thursday,Breakfast,Masala Dosa & Sambar,South Indian,453,549,414,135,24.59,0,10,0,0
+2025-10-09,Thursday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,515,567,425,142,25.04,0,10,0,0
+2025-10-09,Thursday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,518,615,450,165,26.83,0,10,0,0
+2025-10-10,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,462,507,381,126,24.85,0,10,0,0
+2025-10-10,Friday,Lunch,Kadhi Pakoda & Rice,North Indian,540,635,445,190,29.92,0,10,0,0
+2025-10-10,Friday,Dinner,Aloo Gobi & Chapati,Regular Meal,544,620,422,198,31.94,0,10,0,0
+2025-10-11,Saturday,Breakfast,Upma & Mixed Chutney,Light Snacks,359,425,271,154,36.24,1,10,0,0
+2025-10-11,Saturday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,335,407,264,143,35.14,1,10,0,0
+2025-10-11,Saturday,Dinner,Plain Dal Khichdi & Curd,Light Meal,300,339,218,121,35.69,1,10,0,0
+2025-10-12,Sunday,Breakfast,Idli & Vada with Chutney,South Indian,384,443,324,119,26.86,1,10,0,0
+2025-10-12,Sunday,Lunch,Rajma Masala & Steamed Rice,North Indian,399,438,366,72,16.44,1,10,0,0
+2025-10-12,Sunday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,336,380,299,81,21.32,1,10,0,0
+2025-10-13,Monday,Breakfast,Upma & Mixed Chutney,Light Snacks,534,633,396,237,37.44,0,10,0,0
+2025-10-13,Monday,Lunch,Dal Makhani & Roti/Rice,North Indian,560,669,493,176,26.31,0,10,0,0
+2025-10-13,Monday,Dinner,Butter Paneer & Kulcha,Special Feast,558,637,510,127,19.94,0,10,0,0
+2025-10-14,Tuesday,Breakfast,Masala Dosa & Sambar,South Indian,449,509,414,95,18.66,0,10,0,0
+2025-10-14,Tuesday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,507,613,468,145,23.65,0,10,0,0
+2025-10-14,Tuesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,500,550,352,198,36.0,0,10,0,0
+2025-10-15,Wednesday,Breakfast,Idli & Vada with Chutney,South Indian,433,494,373,121,24.49,0,10,0,0
+2025-10-15,Wednesday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,495,549,451,98,17.85,0,10,0,0
+2025-10-15,Wednesday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,470,542,457,85,15.68,0,10,0,0
+2025-10-16,Thursday,Breakfast,Aloo Paratha & Curd,North Indian,415,485,376,109,22.47,0,10,0,0
+2025-10-16,Thursday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,478,549,391,158,28.78,0,10,0,0
+2025-10-16,Thursday,Dinner,Aloo Gobi & Chapati,Regular Meal,461,513,365,148,28.85,0,10,0,0
+2025-10-17,Friday,Breakfast,Idli & Vada with Chutney,South Indian,412,455,352,103,22.64,0,10,0,0
+2025-10-17,Friday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,494,599,465,134,22.37,0,10,0,0
+2025-10-17,Friday,Dinner,Aloo Gobi & Chapati,Regular Meal,478,553,389,164,29.66,0,10,0,0
+2025-10-18,Saturday,Breakfast,Idli & Vada with Chutney,South Indian,318,376,268,108,28.72,1,10,0,0
+2025-10-18,Saturday,Lunch,Sambhar Rice & Poriyal,South Indian,345,408,284,124,30.39,1,10,0,0
+2025-10-18,Saturday,Dinner,Rasam Rice & Papad,South Indian,292,346,226,120,34.68,1,10,0,0
+2025-10-19,Sunday,Breakfast,Aloo Paratha & Curd,North Indian,322,382,290,92,24.08,1,10,0,0
+2025-10-19,Sunday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,325,359,260,99,27.58,1,10,0,0
+2025-10-19,Sunday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,271,310,264,46,14.84,1,10,0,0
+2025-10-20,Monday,Breakfast,Masala Dosa & Sambar,South Indian,478,536,439,97,18.1,0,10,0,0
+2025-10-20,Monday,Lunch,Kadhi Pakoda & Rice,North Indian,520,580,438,142,24.48,0,10,0,0
+2025-10-20,Monday,Dinner,Plain Dal Khichdi & Curd,Light Meal,494,593,347,246,41.48,0,10,0,0
+2025-10-21,Tuesday,Breakfast,Upma & Mixed Chutney,Light Snacks,415,499,309,190,38.08,0,10,0,0
+2025-10-21,Tuesday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,496,603,395,208,34.49,0,10,0,0
+2025-10-21,Tuesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,475,566,387,179,31.63,0,10,0,0
+2025-10-22,Wednesday,Breakfast,Masala Dosa & Sambar,South Indian,451,539,422,117,21.71,0,10,0,0
+2025-10-22,Wednesday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,497,559,360,199,35.6,0,10,0,0
+2025-10-22,Wednesday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,482,549,432,117,21.31,0,10,0,0
+2025-10-23,Thursday,Breakfast,Aloo Paratha & Curd,North Indian,486,566,458,108,19.08,0,10,0,0
+2025-10-23,Thursday,Lunch,Kadhi Pakoda & Rice,North Indian,532,645,460,185,28.68,0,10,0,0
+2025-10-23,Thursday,Dinner,Butter Paneer & Kulcha,Special Feast,528,608,488,120,19.74,0,10,0,0
+2025-10-24,Friday,Breakfast,Poori & Aloo Sabzi,North Indian,502,597,460,137,22.95,0,10,0,0
+2025-10-24,Friday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,533,623,493,130,20.87,0,10,0,0
+2025-10-24,Friday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,525,611,469,142,23.24,0,10,0,0
+2025-10-25,Saturday,Breakfast,Aloo Paratha & Curd,North Indian,366,422,338,84,19.91,1,10,0,0
+2025-10-25,Saturday,Lunch,Kadhi Pakoda & Rice,North Indian,362,439,300,139,31.66,1,10,0,0
+2025-10-25,Saturday,Dinner,Butter Paneer & Kulcha,Special Feast,328,372,305,67,18.01,1,10,0,0
+2025-10-26,Sunday,Breakfast,Aloo Paratha & Curd,North Indian,371,432,335,97,22.45,1,10,0,0
+2025-10-26,Sunday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,349,380,273,107,28.16,1,10,0,0
+2025-10-26,Sunday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,321,350,307,43,12.29,1,10,0,0
+2025-10-27,Monday,Breakfast,Aloo Paratha & Curd,North Indian,499,559,460,99,17.71,0,10,0,0
+2025-10-27,Monday,Lunch,Dal Makhani & Roti/Rice,North Indian,551,666,491,175,26.28,0,10,0,0
+2025-10-27,Monday,Dinner,Rasam Rice & Papad,South Indian,512,569,392,177,31.11,0,10,0,0
+2025-10-28,Tuesday,Breakfast,Poori & Aloo Sabzi,North Indian,489,567,441,126,22.22,0,10,0,0
+2025-10-28,Tuesday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,576,671,463,208,31.0,0,10,0,0
+2025-10-28,Tuesday,Dinner,Butter Paneer & Kulcha,Special Feast,533,629,492,137,21.78,0,10,0,0
+2025-10-29,Wednesday,Breakfast,Idli & Vada with Chutney,South Indian,491,597,407,190,31.83,0,10,0,0
+2025-10-29,Wednesday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,520,586,499,87,14.85,0,10,0,0
+2025-10-29,Wednesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,514,568,369,199,35.04,0,10,0,0
+2025-10-30,Thursday,Breakfast,Idli & Vada with Chutney,South Indian,516,594,448,146,24.58,0,10,0,0
+2025-10-30,Thursday,Lunch,Dal Makhani & Roti/Rice,North Indian,552,650,481,169,26.0,0,10,0,0
+2025-10-30,Thursday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,560,627,499,128,20.41,0,10,0,0
+2025-10-31,Friday,Breakfast,Poori & Aloo Sabzi,North Indian,444,498,395,103,20.68,0,10,0,0
+2025-10-31,Friday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,476,553,356,197,35.62,0,10,0,0
+2025-10-31,Friday,Dinner,Aloo Gobi & Chapati,Regular Meal,462,545,369,176,32.29,0,10,0,0
+2025-11-01,Saturday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,347,420,274,146,34.76,1,11,0,0
+2025-11-01,Saturday,Lunch,Dal Makhani & Roti/Rice,North Indian,363,413,325,88,21.31,1,11,0,0
+2025-11-01,Saturday,Dinner,Rasam Rice & Papad,South Indian,309,357,244,113,31.65,1,11,0,0
+2025-11-02,Sunday,Breakfast,Aloo Paratha & Curd,North Indian,369,413,343,70,16.95,1,11,0,0
+2025-11-02,Sunday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,367,417,341,76,18.23,1,11,0,0
+2025-11-02,Sunday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,315,353,260,93,26.35,1,11,0,0
+2025-11-03,Monday,Breakfast,Upma & Mixed Chutney,Light Snacks,509,603,380,223,36.98,0,11,0,0
+2025-11-03,Monday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,545,624,400,224,35.9,0,11,0,0
+2025-11-03,Monday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,524,569,456,113,19.86,0,11,0,0
+2025-11-04,Tuesday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,512,611,425,186,30.44,0,11,0,0
+2025-11-04,Tuesday,Lunch,Sambhar Rice & Poriyal,South Indian,552,673,449,224,33.28,0,11,0,0
+2025-11-04,Tuesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,544,589,441,148,25.13,0,11,0,0
+2025-11-05,Wednesday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,493,535,402,133,24.86,0,11,0,0
+2025-11-05,Wednesday,Lunch,Dal Makhani & Roti/Rice,North Indian,562,658,506,152,23.1,0,11,0,0
+2025-11-05,Wednesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,537,588,428,160,27.21,0,11,0,0
+2025-11-06,Thursday,Breakfast,Aloo Paratha & Curd,North Indian,459,521,419,102,19.58,0,11,0,0
+2025-11-06,Thursday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,483,526,359,167,31.75,0,11,0,0
+2025-11-06,Thursday,Dinner,Aloo Gobi & Chapati,Regular Meal,475,567,377,190,33.51,0,11,0,0
+2025-11-07,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,470,559,379,180,32.2,0,11,0,0
+2025-11-07,Friday,Lunch,Sambhar Rice & Poriyal,South Indian,535,588,441,147,25.0,0,11,0,0
+2025-11-07,Friday,Dinner,Aloo Gobi & Chapati,Regular Meal,517,561,409,152,27.09,0,11,0,0
+2025-11-08,Saturday,Breakfast,Aloo Paratha & Curd,North Indian,327,394,294,100,25.38,1,11,0,0
+2025-11-08,Saturday,Lunch,Rajma Masala & Steamed Rice,North Indian,312,344,283,61,17.73,1,11,0,0
+2025-11-08,Saturday,Dinner,Aloo Gobi & Chapati,Regular Meal,283,318,221,97,30.5,1,11,0,0
+2025-11-09,Sunday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,382,413,309,104,25.18,1,11,0,0
+2025-11-09,Sunday,Lunch,Sambhar Rice & Poriyal,South Indian,384,446,328,118,26.46,1,11,0,0
+2025-11-09,Sunday,Dinner,Plain Dal Khichdi & Curd,Light Meal,344,401,250,151,37.66,1,11,0,0
+2025-11-10,Monday,Breakfast,Aloo Paratha & Curd,North Indian,555,644,519,125,19.41,0,11,1,0
+2025-11-10,Monday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,581,678,535,143,21.09,0,11,1,0
+2025-11-10,Monday,Dinner,Aloo Gobi & Chapati,Regular Meal,570,681,448,233,34.21,0,11,1,0
+2025-11-11,Tuesday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,512,575,403,172,29.91,0,11,1,0
+2025-11-11,Tuesday,Lunch,Rajma Masala & Steamed Rice,North Indian,554,637,490,147,23.08,0,11,1,0
+2025-11-11,Tuesday,Dinner,Aloo Gobi & Chapati,Regular Meal,553,654,447,207,31.65,0,11,1,0
+2025-11-12,Wednesday,Breakfast,Poori & Aloo Sabzi,North Indian,491,563,460,103,18.29,0,11,1,0
+2025-11-12,Wednesday,Lunch,Kadhi Pakoda & Rice,North Indian,540,652,445,207,31.75,0,11,1,0
+2025-11-12,Wednesday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,530,636,477,159,25.0,0,11,1,0
+2025-11-13,Thursday,Breakfast,Upma & Mixed Chutney,Light Snacks,508,568,392,176,30.99,0,11,1,0
+2025-11-13,Thursday,Lunch,Dal Makhani & Roti/Rice,North Indian,575,644,521,123,19.1,0,11,1,0
+2025-11-13,Thursday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,572,656,515,141,21.49,0,11,1,0
+2025-11-14,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,547,600,437,163,27.17,0,11,1,0
+2025-11-14,Friday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,567,677,433,244,36.04,0,11,1,0
+2025-11-14,Friday,Dinner,Plain Dal Khichdi & Curd,Light Meal,564,631,396,235,37.24,0,11,1,0
+2025-11-15,Saturday,Breakfast,Aloo Paratha & Curd,North Indian,556,617,519,98,15.88,1,11,1,0
+2025-11-15,Saturday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,517,578,385,193,33.39,1,11,1,0
+2025-11-15,Saturday,Dinner,Butter Paneer & Kulcha,Special Feast,466,519,435,84,16.18,1,11,1,0
+2025-11-16,Sunday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,496,558,392,166,29.75,1,11,1,0
+2025-11-16,Sunday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,509,550,414,136,24.73,1,11,1,0
+2025-11-16,Sunday,Dinner,Aloo Gobi & Chapati,Regular Meal,474,555,367,188,33.87,1,11,1,0
+2025-11-17,Monday,Breakfast,Idli & Vada with Chutney,South Indian,523,588,457,131,22.28,0,11,1,0
+2025-11-17,Monday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,611,708,560,148,20.9,0,11,1,0
+2025-11-17,Monday,Dinner,Aloo Gobi & Chapati,Regular Meal,586,635,473,162,25.51,0,11,1,0
+2025-11-18,Tuesday,Breakfast,Idli & Vada with Chutney,South Indian,549,669,479,190,28.4,0,11,1,0
+2025-11-18,Tuesday,Lunch,Kadhi Pakoda & Rice,North Indian,609,721,502,219,30.37,0,11,1,0
+2025-11-18,Tuesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,594,642,433,209,32.55,0,11,1,0
+2025-11-19,Wednesday,Breakfast,Masala Dosa & Sambar,South Indian,536,627,497,130,20.73,0,11,1,0
+2025-11-19,Wednesday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,576,690,439,251,36.38,0,11,1,0
+2025-11-19,Wednesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,551,620,461,159,25.65,0,11,1,0
+2025-11-20,Thursday,Breakfast,Upma & Mixed Chutney,Light Snacks,501,596,382,214,35.91,0,11,1,0
+2025-11-20,Thursday,Lunch,Chole Bhature & Jeera Rice,North Indian,576,694,541,153,22.05,0,11,1,0
+2025-11-20,Thursday,Dinner,Plain Dal Khichdi & Curd,Light Meal,566,643,399,244,37.95,0,11,1,0
+2025-11-21,Friday,Breakfast,Poori & Aloo Sabzi,North Indian,501,567,442,125,22.05,0,11,1,0
+2025-11-21,Friday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,557,625,458,167,26.72,0,11,1,0
+2025-11-21,Friday,Dinner,Rasam Rice & Papad,South Indian,533,602,405,197,32.72,0,11,1,0
+2025-11-22,Saturday,Breakfast,Upma & Mixed Chutney,Light Snacks,470,540,351,189,35.0,1,11,1,0
+2025-11-22,Saturday,Lunch,Dal Makhani & Roti/Rice,North Indian,503,609,446,163,26.77,1,11,1,0
+2025-11-22,Saturday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,443,486,387,99,20.37,1,11,1,0
+2025-11-23,Sunday,Breakfast,Upma & Mixed Chutney,Light Snacks,518,625,394,231,36.96,1,11,1,0
+2025-11-23,Sunday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,501,594,379,215,36.2,1,11,1,0
+2025-11-23,Sunday,Dinner,Rasam Rice & Papad,South Indian,441,481,348,133,27.65,1,11,1,0
+2025-11-24,Monday,Breakfast,Upma & Mixed Chutney,Light Snacks,514,614,377,237,38.6,0,11,1,0
+2025-11-24,Monday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,559,616,415,201,32.63,0,11,1,0
+2025-11-24,Monday,Dinner,Plain Dal Khichdi & Curd,Light Meal,552,612,384,228,37.25,0,11,1,0
+2025-11-25,Tuesday,Breakfast,Masala Dosa & Sambar,South Indian,539,592,488,104,17.57,0,11,1,0
+2025-11-25,Tuesday,Lunch,Kadhi Pakoda & Rice,North Indian,576,659,471,188,28.53,0,11,1,0
+2025-11-25,Tuesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,553,616,382,234,37.99,0,11,1,0
+2025-11-26,Wednesday,Breakfast,Poori & Aloo Sabzi,North Indian,476,518,429,89,17.18,0,11,1,0
+2025-11-26,Wednesday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,557,674,510,164,24.33,0,11,1,0
+2025-11-26,Wednesday,Dinner,Butter Paneer & Kulcha,Special Feast,519,570,473,97,17.02,0,11,1,0
+2025-11-27,Thursday,Breakfast,Upma & Mixed Chutney,Light Snacks,526,596,407,189,31.71,0,11,1,0
+2025-11-27,Thursday,Lunch,Kadhi Pakoda & Rice,North Indian,577,676,490,186,27.51,0,11,1,0
+2025-11-27,Thursday,Dinner,Aloo Gobi & Chapati,Regular Meal,550,603,445,158,26.2,0,11,1,0
+2025-11-28,Friday,Breakfast,Idli & Vada with Chutney,South Indian,549,593,459,134,22.6,0,11,1,0
+2025-11-28,Friday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,621,733,582,151,20.6,0,11,1,0
+2025-11-28,Friday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,586,653,490,163,24.96,0,11,1,0
+2025-11-29,Saturday,Breakfast,Aloo Paratha & Curd,North Indian,330,357,308,49,13.73,1,11,0,0
+2025-11-29,Saturday,Lunch,Kadhi Pakoda & Rice,North Indian,337,405,291,114,28.15,1,11,0,0
+2025-11-29,Saturday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,290,314,271,43,13.69,1,11,0,0
+2025-11-30,Sunday,Breakfast,Upma & Mixed Chutney,Light Snacks,369,421,269,152,36.1,1,11,0,0
+2025-11-30,Sunday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,352,382,267,115,30.1,1,11,0,0
+2025-11-30,Sunday,Dinner,Aloo Gobi & Chapati,Regular Meal,326,393,254,139,35.37,1,11,0,0
+2025-12-01,Monday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,484,543,388,155,28.55,0,12,0,0
+2025-12-01,Monday,Lunch,Rajma Masala & Steamed Rice,North Indian,546,621,492,129,20.77,0,12,0,0
+2025-12-01,Monday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,500,601,457,144,23.96,0,12,0,0
+2025-12-02,Tuesday,Breakfast,Upma & Mixed Chutney,Light Snacks,512,577,374,203,35.18,0,12,0,0
+2025-12-02,Tuesday,Lunch,Kadhi Pakoda & Rice,North Indian,568,646,472,174,26.93,0,12,0,0
+2025-12-02,Tuesday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,534,616,502,114,18.51,0,12,0,0
+2025-12-03,Wednesday,Breakfast,Poori & Aloo Sabzi,North Indian,443,535,410,125,23.36,0,12,0,0
+2025-12-03,Wednesday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,498,574,367,207,36.06,0,12,0,0
+2025-12-03,Wednesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,477,558,384,174,31.18,0,12,0,0
+2025-12-04,Thursday,Breakfast,Aloo Paratha & Curd,North Indian,483,539,436,103,19.11,0,12,0,0
+2025-12-04,Thursday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,572,678,527,151,22.27,0,12,0,0
+2025-12-04,Thursday,Dinner,Rasam Rice & Papad,South Indian,547,606,415,191,31.52,0,12,0,0
+2025-12-05,Friday,Breakfast,Aloo Paratha & Curd,North Indian,511,620,482,138,22.26,0,12,0,0
+2025-12-05,Friday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,567,684,547,137,20.03,0,12,0,0
+2025-12-05,Friday,Dinner,Rasam Rice & Papad,South Indian,544,657,412,245,37.29,0,12,0,0
+2025-12-06,Saturday,Breakfast,Aloo Paratha & Curd,North Indian,350,390,319,71,18.21,1,12,0,0
+2025-12-06,Saturday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,363,432,268,164,37.96,1,12,0,0
+2025-12-06,Saturday,Dinner,Rasam Rice & Papad,South Indian,312,376,245,131,34.84,1,12,0,0
+2025-12-07,Sunday,Breakfast,Idli & Vada with Chutney,South Indian,326,352,281,71,20.17,1,12,0,0
+2025-12-07,Sunday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,346,393,258,135,34.35,1,12,0,0
+2025-12-07,Sunday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,292,338,275,63,18.64,1,12,0,0
+2025-12-08,Monday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,462,552,369,183,33.15,0,12,0,0
+2025-12-08,Monday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,500,564,406,158,28.01,0,12,0,0
+2025-12-08,Monday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,492,594,472,122,20.54,0,12,0,0
+2025-12-09,Tuesday,Breakfast,Upma & Mixed Chutney,Light Snacks,498,543,382,161,29.65,0,12,0,0
+2025-12-09,Tuesday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,536,642,501,141,21.96,0,12,0,0
+2025-12-09,Tuesday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,497,551,467,84,15.25,0,12,0,0
+2025-12-10,Wednesday,Breakfast,Masala Dosa & Sambar,South Indian,522,599,489,110,18.36,0,12,1,0
+2025-12-10,Wednesday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,553,629,444,185,29.41,0,12,1,0
+2025-12-10,Wednesday,Dinner,Butter Paneer & Kulcha,Special Feast,552,671,506,165,24.59,0,12,1,0
+2025-12-11,Thursday,Breakfast,Upma & Mixed Chutney,Light Snacks,506,554,390,164,29.6,0,12,1,0
+2025-12-11,Thursday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,544,634,508,126,19.87,0,12,1,0
+2025-12-11,Thursday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,536,608,470,138,22.7,0,12,1,0
+2025-12-12,Friday,Breakfast,Idli & Vada with Chutney,South Indian,496,556,427,129,23.2,0,12,1,0
+2025-12-12,Friday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,571,677,554,123,18.17,0,12,1,0
+2025-12-12,Friday,Dinner,Butter Paneer & Kulcha,Special Feast,544,623,502,121,19.42,0,12,1,0
+2025-12-13,Saturday,Breakfast,Upma & Mixed Chutney,Light Snacks,499,593,373,220,37.1,1,12,1,0
+2025-12-13,Saturday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,533,592,519,73,12.33,1,12,1,0
+2025-12-13,Saturday,Dinner,Plain Dal Khichdi & Curd,Light Meal,464,518,332,186,35.91,1,12,1,0
+2025-12-14,Sunday,Breakfast,Upma & Mixed Chutney,Light Snacks,577,625,435,190,30.4,1,12,1,0
+2025-12-14,Sunday,Lunch,Sambhar Rice & Poriyal,South Indian,521,573,425,148,25.83,1,12,1,0
+2025-12-14,Sunday,Dinner,Plain Dal Khichdi & Curd,Light Meal,480,523,340,183,34.99,1,12,1,0
+2025-12-15,Monday,Breakfast,Poori & Aloo Sabzi,North Indian,508,587,467,120,20.44,0,12,1,0
+2025-12-15,Monday,Lunch,Kadhi Pakoda & Rice,North Indian,560,682,460,222,32.55,0,12,1,0
+2025-12-15,Monday,Dinner,Rasam Rice & Papad,South Indian,521,587,408,179,30.49,0,12,1,0
+2025-12-16,Tuesday,Breakfast,Poori & Aloo Sabzi,North Indian,505,612,467,145,23.69,0,12,1,0
+2025-12-16,Tuesday,Lunch,Kadhi Pakoda & Rice,North Indian,564,659,469,190,28.83,0,12,1,0
+2025-12-16,Tuesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,546,616,388,228,37.01,0,12,1,0
+2025-12-17,Wednesday,Breakfast,Idli & Vada with Chutney,South Indian,520,617,439,178,28.85,0,12,1,0
+2025-12-17,Wednesday,Lunch,Dal Makhani & Roti/Rice,North Indian,611,666,545,121,18.17,0,12,1,0
+2025-12-17,Wednesday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,577,635,563,72,11.34,0,12,1,0
+2025-12-18,Thursday,Breakfast,Aloo Paratha & Curd,North Indian,468,529,425,104,19.66,0,12,1,0
+2025-12-18,Thursday,Lunch,Dal Makhani & Roti/Rice,North Indian,553,630,475,155,24.6,0,12,1,0
+2025-12-18,Thursday,Dinner,Aloo Gobi & Chapati,Regular Meal,550,596,433,163,27.35,0,12,1,0
+2025-12-19,Friday,Breakfast,Masala Dosa & Sambar,South Indian,519,561,493,68,12.12,0,12,1,0
+2025-12-19,Friday,Lunch,Kadhi Pakoda & Rice,North Indian,561,676,460,216,31.95,0,12,1,0
+2025-12-19,Friday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,549,622,516,106,17.04,0,12,1,0
+2025-12-20,Saturday,Breakfast,Aloo Paratha & Curd,North Indian,469,524,423,101,19.27,1,12,1,0
+2025-12-20,Saturday,Lunch,Dal Makhani & Roti/Rice,North Indian,492,548,422,126,22.99,1,12,1,0
+2025-12-20,Saturday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,440,513,422,91,17.74,1,12,1,0
+2025-12-21,Sunday,Breakfast,Poori & Aloo Sabzi,North Indian,512,597,461,136,22.78,1,12,1,0
+2025-12-21,Sunday,Lunch,Sambhar Rice & Poriyal,South Indian,508,607,420,187,30.81,1,12,1,0
+2025-12-21,Sunday,Dinner,Rasam Rice & Papad,South Indian,462,519,348,171,32.95,1,12,1,0
+2025-12-22,Monday,Breakfast,Poori & Aloo Sabzi,North Indian,525,590,475,115,19.49,0,12,1,0
+2025-12-22,Monday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,617,694,503,191,27.52,0,12,1,0
+2025-12-22,Monday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,593,649,524,125,19.26,0,12,1,0
+2025-12-23,Tuesday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,536,580,442,138,23.79,0,12,1,0
+2025-12-23,Tuesday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,592,705,466,239,33.9,0,12,1,0
+2025-12-23,Tuesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,565,673,410,263,39.08,0,12,1,0
+2025-12-24,Wednesday,Breakfast,Idli & Vada with Chutney,South Indian,480,528,402,126,23.86,0,12,1,0
+2025-12-24,Wednesday,Lunch,Kadhi Pakoda & Rice,North Indian,577,703,473,230,32.72,0,12,1,0
+2025-12-24,Wednesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,552,667,454,213,31.93,0,12,1,0
+2025-12-25,Thursday,Breakfast,Idli & Vada with Chutney,South Indian,545,656,460,196,29.88,0,12,1,0
+2025-12-25,Thursday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,599,656,455,201,30.64,0,12,1,0
+2025-12-25,Thursday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,582,681,553,128,18.8,0,12,1,0
+2025-12-26,Friday,Breakfast,Upma & Mixed Chutney,Light Snacks,495,601,378,223,37.1,0,12,1,0
+2025-12-26,Friday,Lunch,Kadhi Pakoda & Rice,North Indian,532,591,436,155,26.23,0,12,1,0
+2025-12-26,Friday,Dinner,Rasam Rice & Papad,South Indian,528,612,409,203,33.17,0,12,1,0
+2025-12-27,Saturday,Breakfast,Idli & Vada with Chutney,South Indian,512,563,440,123,21.85,1,12,1,0
+2025-12-27,Saturday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,509,615,472,143,23.25,1,12,1,0
+2025-12-27,Saturday,Dinner,Butter Paneer & Kulcha,Special Feast,439,482,419,63,13.07,1,12,1,0
+2025-12-28,Sunday,Breakfast,Idli & Vada with Chutney,South Indian,520,568,438,130,22.89,1,12,1,0
+2025-12-28,Sunday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,497,593,393,200,33.73,1,12,1,0
+2025-12-28,Sunday,Dinner,Butter Paneer & Kulcha,Special Feast,431,472,397,75,15.89,1,12,1,0
+2025-12-29,Monday,Breakfast,Upma & Mixed Chutney,Light Snacks,467,540,344,196,36.3,0,12,0,0
+2025-12-29,Monday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,541,598,431,167,27.93,0,12,0,0
+2025-12-29,Monday,Dinner,Rasam Rice & Papad,South Indian,537,635,412,223,35.12,0,12,0,0
+2025-12-30,Tuesday,Breakfast,Idli & Vada with Chutney,South Indian,500,554,430,124,22.38,0,12,0,0
+2025-12-30,Tuesday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,559,645,540,105,16.28,0,12,0,0
+2025-12-30,Tuesday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,534,596,474,122,20.47,0,12,0,0
+2025-12-31,Wednesday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,518,587,417,170,28.96,0,12,0,0
+2025-12-31,Wednesday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,549,640,532,108,16.88,0,12,0,0
+2025-12-31,Wednesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,543,656,394,262,39.94,0,12,0,0
+2026-01-01,Thursday,Breakfast,Upma & Mixed Chutney,Light Snacks,128,141,95,46,32.62,0,1,0,1
+2026-01-01,Thursday,Lunch,Rajma Masala & Steamed Rice,North Indian,154,169,138,31,18.34,0,1,0,1
+2026-01-01,Thursday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,148,170,121,49,28.82,0,1,0,1
+2026-01-02,Friday,Breakfast,Poori & Aloo Sabzi,North Indian,159,178,141,37,20.79,0,1,0,1
+2026-01-02,Friday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,179,217,146,71,32.72,0,1,0,1
+2026-01-02,Friday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,168,204,140,64,31.37,0,1,0,1
+2026-01-03,Saturday,Breakfast,Idli & Vada with Chutney,South Indian,130,148,112,36,24.32,1,1,0,1
+2026-01-03,Saturday,Lunch,Rajma Masala & Steamed Rice,North Indian,128,151,112,39,25.83,1,1,0,1
+2026-01-03,Saturday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,113,126,99,27,21.43,1,1,0,1
+2026-01-04,Sunday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,156,170,127,43,25.29,1,1,0,1
+2026-01-04,Sunday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,147,179,140,39,21.79,1,1,0,1
+2026-01-04,Sunday,Dinner,Aloo Gobi & Chapati,Regular Meal,134,158,103,55,34.81,1,1,0,1
+2026-01-05,Monday,Breakfast,Idli & Vada with Chutney,South Indian,130,145,112,33,22.76,0,1,0,1
+2026-01-05,Monday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,150,179,139,40,22.35,0,1,0,1
+2026-01-05,Monday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,149,177,119,58,32.77,0,1,0,1
+2026-01-06,Tuesday,Breakfast,Upma & Mixed Chutney,Light Snacks,112,130,85,45,34.62,0,1,0,1
+2026-01-06,Tuesday,Lunch,Rajma Masala & Steamed Rice,North Indian,126,150,115,35,23.33,0,1,0,1
+2026-01-06,Tuesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,118,132,83,49,37.12,0,1,0,1
+2026-01-07,Wednesday,Breakfast,Aloo Paratha & Curd,North Indian,140,169,129,40,23.67,0,1,0,1
+2026-01-07,Wednesday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,155,169,116,53,31.36,0,1,0,1
+2026-01-07,Wednesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,148,180,108,72,40.0,0,1,0,1
+2026-01-08,Thursday,Breakfast,Poori & Aloo Sabzi,North Indian,156,175,139,36,20.57,0,1,0,1
+2026-01-08,Thursday,Lunch,Chole Bhature & Jeera Rice,North Indian,176,202,163,39,19.31,0,1,0,1
+2026-01-08,Thursday,Dinner,Aloo Gobi & Chapati,Regular Meal,170,192,135,57,29.69,0,1,0,1
+2026-01-09,Friday,Breakfast,Masala Dosa & Sambar,South Indian,103,123,96,27,21.95,0,1,0,1
+2026-01-09,Friday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,118,127,93,34,26.77,0,1,0,1
+2026-01-09,Friday,Dinner,Plain Dal Khichdi & Curd,Light Meal,114,138,79,59,42.75,0,1,0,1
+2026-01-10,Saturday,Breakfast,Upma & Mixed Chutney,Light Snacks,134,148,101,47,31.76,1,1,0,1
+2026-01-10,Saturday,Lunch,Kadhi Pakoda & Rice,North Indian,143,160,120,40,25.0,1,1,0,1
+2026-01-10,Saturday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,122,141,109,32,22.7,1,1,0,1
+2026-01-11,Sunday,Breakfast,Aloo Paratha & Curd,North Indian,370,432,331,101,23.38,1,1,0,0
+2026-01-11,Sunday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,338,372,278,94,25.27,1,1,0,0
+2026-01-11,Sunday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,298,330,251,79,23.94,1,1,0,0
+2026-01-12,Monday,Breakfast,Poori & Aloo Sabzi,North Indian,498,598,463,135,22.58,0,1,0,0
+2026-01-12,Monday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,545,616,510,106,17.21,0,1,0,0
+2026-01-12,Monday,Dinner,Rasam Rice & Papad,South Indian,512,574,392,182,31.71,0,1,0,0
+2026-01-13,Tuesday,Breakfast,Poori & Aloo Sabzi,North Indian,468,519,415,104,20.04,0,1,0,0
+2026-01-13,Tuesday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,529,621,494,127,20.45,0,1,0,0
+2026-01-13,Tuesday,Dinner,Butter Paneer & Kulcha,Special Feast,508,557,468,89,15.98,0,1,0,0
+2026-01-14,Wednesday,Breakfast,Upma & Mixed Chutney,Light Snacks,462,546,345,201,36.81,0,1,0,0
+2026-01-14,Wednesday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,541,606,510,96,15.84,0,1,0,0
+2026-01-14,Wednesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,546,599,455,144,24.04,0,1,0,0
+2026-01-15,Thursday,Breakfast,Poori & Aloo Sabzi,North Indian,482,531,441,90,16.95,0,1,0,0
+2026-01-15,Thursday,Lunch,Sambhar Rice & Poriyal,South Indian,574,632,481,151,23.89,0,1,0,0
+2026-01-15,Thursday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,552,612,451,161,26.31,0,1,0,0
+2026-01-16,Friday,Breakfast,Poori & Aloo Sabzi,North Indian,516,626,466,160,25.56,0,1,0,0
+2026-01-16,Friday,Lunch,Sambhar Rice & Poriyal,South Indian,567,663,464,199,30.02,0,1,0,0
+2026-01-16,Friday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,541,630,522,108,17.14,0,1,0,0
+2026-01-17,Saturday,Breakfast,Upma & Mixed Chutney,Light Snacks,362,401,278,123,30.67,1,1,0,0
+2026-01-17,Saturday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,368,430,271,159,36.98,1,1,0,0
+2026-01-17,Saturday,Dinner,Plain Dal Khichdi & Curd,Light Meal,339,389,248,141,36.25,1,1,0,0
+2026-01-18,Sunday,Breakfast,Idli & Vada with Chutney,South Indian,309,334,269,65,19.46,1,1,0,0
+2026-01-18,Sunday,Lunch,Sambhar Rice & Poriyal,South Indian,321,385,260,125,32.47,1,1,0,0
+2026-01-18,Sunday,Dinner,Aloo Gobi & Chapati,Regular Meal,274,302,217,85,28.15,1,1,0,0
+2026-01-19,Monday,Breakfast,Masala Dosa & Sambar,South Indian,428,464,392,72,15.52,0,1,0,0
+2026-01-19,Monday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,535,599,500,99,16.53,0,1,0,0
+2026-01-19,Monday,Dinner,Rasam Rice & Papad,South Indian,505,595,387,208,34.96,0,1,0,0
+2026-01-20,Tuesday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,428,466,338,128,27.47,0,1,0,0
+2026-01-20,Tuesday,Lunch,Chole Bhature & Jeera Rice,North Indian,501,563,451,112,19.89,0,1,0,0
+2026-01-20,Tuesday,Dinner,Aloo Gobi & Chapati,Regular Meal,475,558,383,175,31.36,0,1,0,0
+2026-01-21,Wednesday,Breakfast,Upma & Mixed Chutney,Light Snacks,443,493,328,165,33.47,0,1,0,0
+2026-01-21,Wednesday,Lunch,Kadhi Pakoda & Rice,North Indian,475,516,402,114,22.09,0,1,0,0
+2026-01-21,Wednesday,Dinner,Rasam Rice & Papad,South Indian,477,523,373,150,28.68,0,1,0,0
+2026-01-22,Thursday,Breakfast,Upma & Mixed Chutney,Light Snacks,456,525,339,186,35.43,0,1,0,0
+2026-01-22,Thursday,Lunch,Dal Makhani & Roti/Rice,North Indian,531,631,457,174,27.58,0,1,0,0
+2026-01-22,Thursday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,532,641,463,178,27.77,0,1,0,0
+2026-01-23,Friday,Breakfast,Idli & Vada with Chutney,South Indian,432,501,372,129,25.75,0,1,0,0
+2026-01-23,Friday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,509,553,484,69,12.48,0,1,0,0
+2026-01-23,Friday,Dinner,Plain Dal Khichdi & Curd,Light Meal,495,552,350,202,36.59,0,1,0,0
+2026-01-24,Saturday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,311,335,256,79,23.58,1,1,0,0
+2026-01-24,Saturday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,307,348,288,60,17.24,1,1,0,0
+2026-01-24,Saturday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,270,292,266,26,8.9,1,1,0,0
+2026-01-25,Sunday,Breakfast,Upma & Mixed Chutney,Light Snacks,387,440,288,152,34.55,1,1,0,0
+2026-01-25,Sunday,Lunch,Sambhar Rice & Poriyal,South Indian,373,422,302,120,28.44,1,1,0,0
+2026-01-25,Sunday,Dinner,Aloo Gobi & Chapati,Regular Meal,337,374,259,115,30.75,1,1,0,0
+2026-01-26,Monday,Breakfast,Masala Dosa & Sambar,South Indian,482,539,447,92,17.07,0,1,0,0
+2026-01-26,Monday,Lunch,Dal Makhani & Roti/Rice,North Indian,519,561,458,103,18.36,0,1,0,0
+2026-01-26,Monday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,501,592,489,103,17.4,0,1,0,0
+2026-01-27,Tuesday,Breakfast,Aloo Paratha & Curd,North Indian,453,501,423,78,15.57,0,1,0,0
+2026-01-27,Tuesday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,509,550,372,178,32.36,0,1,0,0
+2026-01-27,Tuesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,472,551,388,163,29.58,0,1,0,0
+2026-01-28,Wednesday,Breakfast,Masala Dosa & Sambar,South Indian,494,592,464,128,21.62,0,1,0,0
+2026-01-28,Wednesday,Lunch,Dal Makhani & Roti/Rice,North Indian,528,587,466,121,20.61,0,1,0,0
+2026-01-28,Wednesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,538,591,454,137,23.18,0,1,0,0
+2026-01-29,Thursday,Breakfast,Masala Dosa & Sambar,South Indian,485,571,451,120,21.02,0,1,0,0
+2026-01-29,Thursday,Lunch,Sambhar Rice & Poriyal,South Indian,503,584,424,160,27.4,0,1,0,0
+2026-01-29,Thursday,Dinner,Aloo Gobi & Chapati,Regular Meal,478,521,385,136,26.1,0,1,0,0
+2026-01-30,Friday,Breakfast,Idli & Vada with Chutney,South Indian,472,565,396,169,29.91,0,1,0,0
+2026-01-30,Friday,Lunch,Kadhi Pakoda & Rice,North Indian,536,602,457,145,24.09,0,1,0,0
+2026-01-30,Friday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,504,553,461,92,16.64,0,1,0,0
+2026-01-31,Saturday,Breakfast,Masala Dosa & Sambar,South Indian,352,400,326,74,18.5,1,1,0,0
+2026-01-31,Saturday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,371,424,279,145,34.2,1,1,0,0
+2026-01-31,Saturday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,326,359,261,98,27.3,1,1,0,0
+2026-02-01,Sunday,Breakfast,Upma & Mixed Chutney,Light Snacks,365,410,280,130,31.71,1,2,0,0
+2026-02-01,Sunday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,372,422,363,59,13.98,1,2,0,0
+2026-02-01,Sunday,Dinner,Butter Paneer & Kulcha,Special Feast,327,398,299,99,24.87,1,2,0,0
+2026-02-02,Monday,Breakfast,Idli & Vada with Chutney,South Indian,451,493,385,108,21.91,0,2,0,0
+2026-02-02,Monday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,491,531,456,75,14.12,0,2,0,0
+2026-02-02,Monday,Dinner,Plain Dal Khichdi & Curd,Light Meal,475,526,332,194,36.88,0,2,0,0
+2026-02-03,Tuesday,Breakfast,Upma & Mixed Chutney,Light Snacks,472,526,356,170,32.32,0,2,0,0
+2026-02-03,Tuesday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,500,603,462,141,23.38,0,2,0,0
+2026-02-03,Tuesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,508,608,407,201,33.06,0,2,0,0
+2026-02-04,Wednesday,Breakfast,Masala Dosa & Sambar,South Indian,464,538,423,115,21.38,0,2,0,0
+2026-02-04,Wednesday,Lunch,Kadhi Pakoda & Rice,North Indian,550,626,459,167,26.68,0,2,0,0
+2026-02-04,Wednesday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,523,585,457,128,21.88,0,2,0,0
+2026-02-05,Thursday,Breakfast,Masala Dosa & Sambar,South Indian,508,584,476,108,18.49,0,2,0,0
+2026-02-05,Thursday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,556,630,402,228,36.19,0,2,0,0
+2026-02-05,Thursday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,530,611,445,166,27.17,0,2,0,0
+2026-02-06,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,510,576,421,155,26.91,0,2,0,0
+2026-02-06,Friday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,544,630,400,230,36.51,0,2,0,0
+2026-02-06,Friday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,514,578,449,129,22.32,0,2,0,0
+2026-02-07,Saturday,Breakfast,Aloo Paratha & Curd,North Indian,316,375,291,84,22.4,1,2,0,0
+2026-02-07,Saturday,Lunch,Chole Bhature & Jeera Rice,North Indian,332,389,298,91,23.39,1,2,0,0
+2026-02-07,Saturday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,285,337,258,79,23.44,1,2,0,0
+2026-02-08,Sunday,Breakfast,Poori & Aloo Sabzi,North Indian,388,469,351,118,25.16,1,2,0,0
+2026-02-08,Sunday,Lunch,Rajma Masala & Steamed Rice,North Indian,366,436,331,105,24.08,1,2,0,0
+2026-02-08,Sunday,Dinner,Rasam Rice & Papad,South Indian,327,385,253,132,34.29,1,2,0,0
+2026-02-09,Monday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,462,562,367,195,34.7,0,2,0,0
+2026-02-09,Monday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,513,556,403,153,27.52,0,2,0,0
+2026-02-09,Monday,Dinner,Butter Paneer & Kulcha,Special Feast,487,561,445,116,20.68,0,2,0,0
+2026-02-10,Tuesday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,405,489,333,156,31.9,0,2,0,0
+2026-02-10,Tuesday,Lunch,Sambhar Rice & Poriyal,South Indian,468,551,380,171,31.03,0,2,0,0
+2026-02-10,Tuesday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,473,567,463,104,18.34,0,2,0,0
+2026-02-11,Wednesday,Breakfast,Aloo Paratha & Curd,North Indian,522,588,483,105,17.86,0,2,0,0
+2026-02-11,Wednesday,Lunch,Sambhar Rice & Poriyal,South Indian,551,668,448,220,32.93,0,2,0,0
+2026-02-11,Wednesday,Dinner,Plain Dal Khichdi & Curd,Light Meal,550,618,391,227,36.73,0,2,0,0
+2026-02-12,Thursday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,508,564,419,145,25.71,0,2,0,0
+2026-02-12,Thursday,Lunch,Rajma Masala & Steamed Rice,North Indian,538,603,491,112,18.57,0,2,0,0
+2026-02-12,Thursday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,532,645,524,121,18.76,0,2,0,0
+2026-02-13,Friday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,437,531,363,168,31.64,0,2,0,0
+2026-02-13,Friday,Lunch,Chole Bhature & Jeera Rice,North Indian,518,595,465,130,21.85,0,2,0,0
+2026-02-13,Friday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,505,614,442,172,28.01,0,2,0,0
+2026-02-14,Saturday,Breakfast,Masala Dosa & Sambar,South Indian,334,376,315,61,16.22,1,2,0,0
+2026-02-14,Saturday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,314,342,290,52,15.2,1,2,0,0
+2026-02-14,Saturday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,286,310,258,52,16.77,1,2,0,0
+2026-02-15,Sunday,Breakfast,Idli & Vada with Chutney,South Indian,371,420,315,105,25.0,1,2,0,0
+2026-02-15,Sunday,Lunch,Lauki Kofta & Steamed Rice,Regular Meal,341,405,258,147,36.3,1,2,0,0
+2026-02-15,Sunday,Dinner,Aloo Gobi & Chapati,Regular Meal,305,336,244,92,27.38,1,2,0,0
+2026-02-16,Monday,Breakfast,Masala Dosa & Sambar,South Indian,420,457,401,56,12.25,0,2,0,0
+2026-02-16,Monday,Lunch,Rajma Masala & Steamed Rice,North Indian,498,543,439,104,19.15,0,2,0,0
+2026-02-16,Monday,Dinner,Butter Paneer & Kulcha,Special Feast,466,561,446,115,20.5,0,2,0,0
+2026-02-17,Tuesday,Breakfast,Idli & Vada with Chutney,South Indian,499,549,434,115,20.95,0,2,0,0
+2026-02-17,Tuesday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,536,609,524,85,13.96,0,2,0,0
+2026-02-17,Tuesday,Dinner,Aloo Gobi & Chapati,Regular Meal,531,593,426,167,28.16,0,2,0,0
+2026-02-18,Wednesday,Breakfast,Poori & Aloo Sabzi,North Indian,427,490,390,100,20.41,0,2,0,0
+2026-02-18,Wednesday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,500,560,468,92,16.43,0,2,0,0
+2026-02-18,Wednesday,Dinner,Rasam Rice & Papad,South Indian,492,538,379,159,29.55,0,2,0,0
+2026-02-19,Thursday,Breakfast,Upma & Mixed Chutney,Light Snacks,424,476,325,151,31.72,0,2,0,0
+2026-02-19,Thursday,Lunch,Kadhi Pakoda & Rice,North Indian,497,555,428,127,22.88,0,2,0,0
+2026-02-19,Thursday,Dinner,Rasam Rice & Papad,South Indian,484,582,366,216,37.11,0,2,0,0
+2026-02-20,Friday,Breakfast,Idli & Vada with Chutney,South Indian,432,517,362,155,29.98,0,2,0,0
+2026-02-20,Friday,Lunch,Paneer Butter Masala & Naan/Rice,Special Feast,502,548,477,71,12.96,0,2,0,0
+2026-02-20,Friday,Dinner,Rasam Rice & Papad,South Indian,491,597,380,217,36.35,0,2,0,0
+2026-02-21,Saturday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,337,409,273,136,33.25,1,2,0,0
+2026-02-21,Saturday,Lunch,Mixed Veg Curry & Phulka/Dal,Regular Meal,359,402,283,119,29.6,1,2,0,0
+2026-02-21,Saturday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,323,371,268,103,27.76,1,2,0,0
+2026-02-22,Sunday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,398,472,315,157,33.26,1,2,0,0
+2026-02-22,Sunday,Lunch,Rajma Masala & Steamed Rice,North Indian,398,441,351,90,20.41,1,2,0,0
+2026-02-22,Sunday,Dinner,Chicken/Mushroom Biryani Special,Special Feast,334,406,319,87,21.43,1,2,0,0
+2026-02-23,Monday,Breakfast,Upma & Mixed Chutney,Light Snacks,446,527,331,196,37.19,0,2,0,0
+2026-02-23,Monday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,505,584,481,103,17.64,0,2,0,0
+2026-02-23,Monday,Dinner,Plain Dal Khichdi & Curd,Light Meal,495,595,351,244,41.01,0,2,0,0
+2026-02-24,Tuesday,Breakfast,Poha & Boiled Eggs/Sprouts,Light Snacks,504,554,399,155,27.98,0,2,0,0
+2026-02-24,Tuesday,Lunch,Veg Biryani & Mirchi Ka Salan,Special Feast,562,614,536,78,12.7,0,2,0,0
+2026-02-24,Tuesday,Dinner,Egg Curry / Malai Kofta & Rice,North Indian,542,651,494,157,24.12,0,2,0,0
+2026-02-25,Wednesday,Breakfast,Upma & Mixed Chutney,Light Snacks,452,505,330,175,34.65,0,2,0,0
+2026-02-25,Wednesday,Lunch,Rajma Masala & Steamed Rice,North Indian,507,576,461,115,19.97,0,2,0,0
+2026-02-25,Wednesday,Dinner,Dal Tadka & Phulka with Salad,Regular Meal,499,555,405,150,27.03,0,2,0,0

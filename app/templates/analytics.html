@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Waste Analytics - Food Waste AI{% endblock %}
+{% block page_title %}Food Waste Analytics & Trends{% endblock %}
+
+{% block content %}
+<!-- Top Level Period Waste Metrics -->
+<div class="stat-grid">
+    <div class="stat-card">
+        <div class="stat-icon icon-green">📅</div>
+        <div class="stat-content">
+            <div class="stat-label">Daily Average Waste</div>
+            <div class="stat-value">{{ "{:,}".format(analytics.daily_avg_waste) }} meals</div>
+            <div class="stat-hint">Across all 3 daily meal sessions</div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon icon-orange">🗓️</div>
+        <div class="stat-content">
+            <div class="stat-label">Weekly Waste Rate</div>
+            <div class="stat-value">{{ analytics.weekly_waste_pct }}%</div>
+            <div class="stat-hint">Recent 7-day average</div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon icon-blue">📊</div>
+        <div class="stat-content">
+            <div class="stat-label">Monthly Cumulative Waste</div>
+            <div class="stat-value">{{ "{:,}".format(analytics.monthly_total_waste) }} meals</div>
+            <div class="stat-hint">Recent 30 days total unconsumed</div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon icon-red">🌱</div>
+        <div class="stat-content">
+            <div class="stat-label">Potential Food Saved via AI</div>
+            <div class="stat-value">{{ "{:,}".format(analytics.potential_savings_meals) }} meals</div>
+            <div class="stat-hint">Estimated ~{{ analytics.potential_savings_pct }}% reduction</div>
+        </div>
+    </div>
+</div>
+
+<!-- Download CSV Header Banner -->
+<div class="card" style="padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+    <div>
+        <strong style="color: var(--primary-dark); font-size: 15px;">📥 Comprehensive Mess Audit Reports</strong>
+        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">Export all historical records including prepared counts, actual consumption, predicted demand, and prediction errors.</p>
+    </div>
+    <a href="{{ url_for('api.export_csv') }}" class="btn btn-secondary btn-sm" style="border-color: var(--primary-border); color: var(--primary-dark);">
+        📄 Download CSV Report
+    </a>
+</div>
+
+{% if analytics.completed_records > 0 %}
+<!-- Analytics Charts Grid -->
+<div class="charts-grid">
+    <!-- Chart 1: Menu-wise Waste Breakdown -->
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h2 class="card-title">🍽️ Menu-Wise Waste Analysis (Top Menus)</h2>
+                <div class="card-subtitle">Comparing average food waste across different dishes</div>
+            </div>
+            <span class="badge badge-low">Menu Impact</span>
+        </div>
+        <div class="chart-container">
+            <canvas id="menuWasteChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Chart 2: Meal Session Distribution -->
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h2 class="card-title">🍩 Waste by Meal Session</h2>
+                <div class="card-subtitle">Distribution of waste between Breakfast, Lunch, and Dinner</div>
+            </div>
+            <span class="badge badge-pending">Proportions</span>
+        </div>
+        <div class="chart-container">
+            <canvas id="mealDistributionChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Full Timeline Waste Trend Chart -->
+<div class="card">
+    <div class="card-header">
+        <div>
+            <h2 class="card-title">📉 Historical Food Waste Trend (Meals Over Time)</h2>
+            <div class="card-subtitle">Tracking daily unconsumed meal portions across historical logs</div>
+        </div>
+        <span class="badge badge-low">30-Day Window</span>
+    </div>
+    <div class="chart-container" style="height: 320px;">
+        <canvas id="fullWasteTrendChart"></canvas>
+    </div>
+</div>
+{% else %}
+<div class="card">
+    <div class="empty-state">
+        <div class="empty-state-icon">📊</div>
+        <h3>No Completed Meal Records for Analytics</h3>
+        <p>Analytics and trend charts require completed meal records where both preparation and actual consumption have been logged.</p>
+        <a href="{{ url_for('main.entry') }}" class="btn btn-primary">+ Log Completed Meal</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if analytics.completed_records > 0 %}
+<script src="{{ url_for('static', filename='js/analytics.js') }}"></script>
+{% endif %}
+{% endblock %}
